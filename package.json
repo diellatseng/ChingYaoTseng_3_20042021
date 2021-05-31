@@ -1,0 +1,22 @@
+{
+  "name": "p2_tseng_ching-yao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/main.scss:./css/main.css -w --style expanded",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diellatseng/ChingYaoTseng_3_20042021.git"
+  },
+  "author": "Diella",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/diellatseng/ChingYaoTseng_3_20042021/issues"
+  },
+  "homepage": "https://github.com/diellatseng/ChingYaoTseng_3_20042021#readme"
+}
