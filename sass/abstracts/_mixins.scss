@@ -1,0 +1,11 @@
+@mixin center($width: 100%) {
+    width: $width;
+    margin: auto;
+}
+
+@mixin flex ($direction:column, $justify: center, $align:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

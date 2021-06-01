@@ -1,0 +1,8 @@
+.header {
+    @include flex;
+}
+
+.header-logo {
+    width: 220px;
+    padding: 20px;
+}
