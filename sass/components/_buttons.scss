@@ -1,0 +1,10 @@
+@mixin button {
+    margin: 30px 0;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 3px 3px 6px lighten($dark-gray, 30);
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    color: #fff;
+    font-weight: $medium;
+}

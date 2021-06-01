@@ -161,5 +161,8 @@ h1, h2 {
   color: #fff;
   font-weight: 500;
 }
+.top-banner__button:hover {
+  background-image: linear-gradient(to top right, #FF79DA, #9356DC);
+}
 
 /*# sourceMappingURL=main.css.map */
