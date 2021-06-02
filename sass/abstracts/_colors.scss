@@ -2,11 +2,11 @@ $primary : #9356DC;
 $secondary: #FF79DA;
 $accent: #99E2D0;
 
-$gray: rgb(224, 224, 224);
-$light-gray: lighten($gray, 8);
-$mid-gray: darken($gray, 40);
-$dark-gray: darken($gray, 55);
-$deep-gray: darken($gray, 65);
+$gray: #e0e0e0;
+$gray-light: lighten($gray, 8);
+$gray-mid: darken($gray, 40);
+$gray-dark: darken($gray, 55);
+$gray-deep: darken($gray, 65);
 
-$green: #73FFE1;
-$dark-green: darken($green, 40);
+$green: #90f0db;
+$green-dark: darken($green, 40);

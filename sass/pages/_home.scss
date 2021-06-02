@@ -3,11 +3,11 @@
     @include flex(row);
     @include box-shadow(inset);
     background-color: $gray;
-    color: $deep-gray;
+    color: $gray-deep;
 
     &__icon {
         padding: 10px;
-        color: $deep-gray;
+        color: $gray-deep;
     }
 
     &__input {
@@ -19,8 +19,8 @@
     height: 300px;
     @include flex;
     padding: 20px;
-    background-color: $light-gray;
-    color: text-color($light-gray);
+    background-color: $gray-light;
+    color: text-color($gray-light);
     text-align: center;
 
     &__title {
@@ -28,7 +28,7 @@
     }
 
     &__descr {
-        color: $dark-gray;
+        color: $gray-dark;
         text-align: center;
     }
 
@@ -42,7 +42,7 @@
 }
 
 .steps {
-    @include page-padding(30px, 20px);
+    @include padding(30px, 20px);
 }
 
 .step {
@@ -51,7 +51,7 @@
     padding: 1.5em 0;
     border-radius: 1.5em;
     @include box-shadow;
-    background-color: $light-gray;
+    background-color: $gray-light;
 
     &__num {
         position: relative;
@@ -64,7 +64,7 @@
 
     &__icon {
         margin: 0 20px;
-        color: $mid-gray;
+        color: $gray-mid;
     }
 
     &__descr {
@@ -82,5 +82,5 @@
 
 .restaurants {
     @extend .steps;
-    background-color: $light-gray;
+    background-color: $gray-light;
 }

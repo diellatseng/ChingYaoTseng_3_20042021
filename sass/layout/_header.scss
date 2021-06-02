@@ -1,8 +1,15 @@
 .header {
     @include flex;
+
+    &__button {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        font-size: 1.2em;
+    }
 }
 
 .header-logo {
-    width: 220px;
+    width: 200px;
     padding: 20px;
 }

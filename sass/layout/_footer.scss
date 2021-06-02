@@ -1,7 +1,7 @@
 .footer {
     @include flex(column, center, left);
-    @include page-padding(20px);
-    background-color: $deep-gray;
+    @include padding(20px);
+    background-color: $gray-deep;
 
     &__title {
         margin-bottom: .5em;
