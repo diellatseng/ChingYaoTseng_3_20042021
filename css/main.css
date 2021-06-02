@@ -76,10 +76,6 @@ th {
   padding: 0;
 }
 
-a, a:active, a:hover, a:visited {
-  text-decoration: none;
-  color: black;
-}
 body {
   font-size: 17px;
 }
@@ -115,6 +111,15 @@ h1, h2 {
   font-family: "Shrikhand", cursive;
 }
 
+.footer a, .footer .card a:active, .card .footer a:active, .footer .card a:hover, .card .footer a:hover, .footer .card a:visited, .card .footer a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -127,11 +132,23 @@ h1, h2 {
   padding: 20px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: #474747;
+}
+
 .card {
   position: relative;
   margin: 20px 0;
   border-radius: 20px;
   background-color: white;
+}
+.card a, .card a:active, .card a:hover, .card a:visited {
+  text-decoration: none;
+  color: black;
 }
 .card__img {
   width: 100%;
@@ -238,7 +255,7 @@ h1, h2 {
   padding: 2px 6px;
   border-radius: 50%;
   background-color: #9356DC;
-  color: #fff;
+  color: #000;
 }
 .step__icon {
   margin: 0 20px;
