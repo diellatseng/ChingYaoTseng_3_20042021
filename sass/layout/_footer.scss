@@ -1,5 +1,19 @@
 .footer {
     @include flex(column, center, left);
-    @include page-padding(30px);
+    @include page-padding(20px);
     background-color: $deep-gray;
+
+    &__title {
+        margin-bottom: .5em;
+        font-size: 1.2rem;
+    }
+
+    &__link {
+        @include flex(row, left, center);
+        margin: .3em 0;
+    }
+
+    &__icon {
+        margin-right: 1em;
+    }
 }
