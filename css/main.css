@@ -167,12 +167,16 @@ h1, h2 {
 }
 .card__img {
   width: 100%;
-  height: 250px;
+  height: 170px;
   object-fit: cover;
+  object-position: 50% 60%;
   border-radius: 10px 10px 0 0;
 }
 .card__descr {
-  padding: 10px 0 20px 20px;
+  padding: 10px 0 15px 20px;
+}
+.card__title {
+  margin-bottom: 0.2em;
 }
 
 .favorite {
@@ -249,7 +253,7 @@ h1, h2 {
 }
 
 .steps, .restaurants {
-  padding: 0 20px;
+  padding: 30px 20px;
 }
 
 .step {

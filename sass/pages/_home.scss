@@ -41,8 +41,8 @@
     }
 }
 
-.steps, .restaurants {
-    @include page-padding;
+.steps {
+    @include page-padding(30px, 20px);
 }
 
 .step {
@@ -81,5 +81,6 @@
 }
 
 .restaurants {
+    @extend .steps;
     background-color: $light-gray;
 }
