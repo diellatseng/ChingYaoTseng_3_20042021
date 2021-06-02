@@ -194,10 +194,12 @@ h1, h2 {
   position: absolute;
   right: 10px;
   top: 10px;
-  padding: 0.5em;
-  border-radius: 5px;
-  background-color: #73FFE1;
-  color: #00a682;
+  padding: 0.4em 0.7em;
+  border-radius: 2px;
+  background-color: #90f0db;
+  color: #159f81;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .search-box {
