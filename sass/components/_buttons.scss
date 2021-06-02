@@ -3,8 +3,14 @@
     padding: 1em 2em;
     border: none;
     border-radius: 2em;
-    box-shadow: 3px 3px 6px lighten($dark-gray, 30);
+    box-shadow: 2px 2px 8px lighten($dark-gray, 40);
     background-image: linear-gradient(to bottom right, $secondary, $primary);
     color: #fff;
-    font-weight: $medium;
+    font-weight: $bold;
+    cursor: pointer;
+}
+
+@mixin hover {
+    box-shadow: 2px 2px 8px lighten($dark-gray, 10);
+    background-image: linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
 }
