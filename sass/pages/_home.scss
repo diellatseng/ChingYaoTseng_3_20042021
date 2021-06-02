@@ -72,3 +72,11 @@
         font-weight: bold;
     }
 }
+
+.step--active {
+    background-color: lighten($primary, 35);
+
+    &__icon {
+        color: $primary;
+    }
+}

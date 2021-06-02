@@ -207,4 +207,11 @@ h1, h2 {
   font-weight: bold;
 }
 
+.step--active {
+  background-color: #f2eafb;
+}
+.step--active__icon {
+  color: #9356DC;
+}
+
 /*# sourceMappingURL=main.css.map */
