@@ -2,7 +2,7 @@ $primary : #9356DC;
 $secondary: #FF79DA;
 $accent: #99E2D0;
 
-$primary-bg: rgb(243, 243, 243);
-$secondary-bg: darken($primary-bg, 5%);
-
-$dark-gray: darken($primary-bg, 65%);
+$gray: rgb(224, 224, 224);
+$light-gray: lighten($gray, 8);
+$mid-gray: darken($gray, 40);
+$dark-gray: darken($gray, 60);

@@ -1,8 +1,8 @@
 .search-box {
     height: 50px;
     @include flex(row);
-    box-shadow: inset 0 7px 9px -7px darken($secondary-bg, 30%);
-    background-color: $secondary-bg;
+    @include box-shadow(inset);
+    background-color: $gray;
     color: $dark-gray;
 
     &__icon {
@@ -19,8 +19,8 @@
     height: 300px;
     @include flex;
     padding: 20px;
-    background-color: $primary-bg;
-    color: text-color($primary-bg);
+    background-color: $light-gray;
+    color: text-color($light-gray);
     text-align: center;
 
     &__title {
@@ -38,5 +38,37 @@
        &:hover {
             @include hover    
         }
+    }
+}
+
+.steps,
+.restaurants {
+    padding: 20px;
+}
+
+.step {
+    @include flex(row, justify, center);
+    margin: 20px 0 20px 10px;
+    padding: 1.5em 0;
+    border-radius: 1.5em;
+    @include box-shadow;
+    background-color: $light-gray;
+
+    &__num {
+        position: relative;
+        right: 10px;
+        padding: 2px 6px;
+        border-radius: 50%;
+        background-color: $primary;
+        color: text-color($primary);
+    }
+
+    &__icon {
+        margin: 0 20px;
+        color: $mid-gray;
+    }
+
+    &__descr {
+        font-weight: bold;
     }
 }
