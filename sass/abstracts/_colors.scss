@@ -3,10 +3,10 @@ $secondary: #FF79DA;
 $accent: #99E2D0;
 
 $gray: #e0e0e0;
-$light-gray: lighten($gray, 8);
-$mid-gray: darken($gray, 40);
-$dark-gray: darken($gray, 55);
-$deep-gray: darken($gray, 65);
+$gray-light: lighten($gray, 8);
+$gray-mid: darken($gray, 40);
+$gray-dark: darken($gray, 55);
+$gray-deep: darken($gray, 65);
 
 $green: #90f0db;
-$dark-green: darken($green, 40);
+$green-dark: darken($green, 40);

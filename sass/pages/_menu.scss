@@ -1,0 +1,22 @@
+.menu-photo {
+    z-index: -1;
+}
+
+.menu {
+    margin-top: -50px;
+    @include padding(50px 20px);
+    border-radius: 3em 3em 0 0;
+    background-color: $gray-light;
+
+    &__top {
+        @include flex(row, space-between, center);
+        margin-bottom: 1.5em;
+    }
+}
+.menu-catagory {
+    margin: 10px 0;
+}
+.fa-heart {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}

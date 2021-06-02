@@ -11,6 +11,6 @@
 }
 
 @mixin hover {
-    @include button-shadow($mid-gray);
+    @include button-shadow($gray-mid);
         background-image: linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
 }
