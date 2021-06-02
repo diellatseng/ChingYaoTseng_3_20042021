@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--embading fontawesome icons-->
     <script src="https://kit.fontawesome.com/7701b960e8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./public/css/main.css">
+    <!--Import Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
     <title>À la française</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <button><span class="fas fa-arrow-left"></span></button>
         <img src="/images/logo/ohmyfood@2x.svg" alt="logo">
     </header>
@@ -95,12 +98,12 @@
         </div>
     </main>
 
-    <footer>
-        <img class="footer-logo" src="/images/logo/ohmyfood@2x.svg" alt="logo">
-        <a href="#"><span class="fas fa-utensils"></span>Proposer un restaurant</a>
-        <a href="#"><span class="fas fa-hands-helping"></span>Proposer un restaurant</a>
-        <a href="#">Mentions légales</a>
-        <a href="mailto:">Contact</a>
+    <footer class="footer">
+        <p class="footer__title">ohmyfood</p>
+        <a class="footer__link" href="#"><span class="footer__icon fas fa-utensils fa-fw fa-xs"></span><p>Proposer un restaurant</p></a>
+        <a class="footer__link" href="#"><span class="footer__icon fas fa-hands-helping fa-fw fa-xs"></span><p>Devenir partenaire</p></a>
+        <a class="footer__link" href="#"><p>Mentions légales</p></a>
+        <a class="footer__link" href="mailto:contact@ohmyfood.fr"><p>Contact</p></a>
     </footer>
 </body>
 </html>
