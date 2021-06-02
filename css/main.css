@@ -122,13 +122,13 @@ h1, h2 {
   font-family: "Shrikhand", cursive;
 }
 
-.menu-catagory__title {
+.menu-catagory {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.dish__descr {
+.dish__descr, .card__descr {
   font-weight: 300;
 }
 
@@ -195,7 +195,7 @@ h1, h2 {
   object-position: 50% 60%;
   border-radius: 10px 10px 0 0;
 }
-.card__descr {
+.card__content {
   padding: 10px 0 15px 20px;
 }
 .card__title {
@@ -210,7 +210,6 @@ h1, h2 {
 }
 .favorite--active {
   background-image: linear-gradient(#9356DC, #FF79DA);
-  color: none;
 }
 
 .tag {
@@ -332,7 +331,7 @@ h1, h2 {
 
 .menu {
   margin-top: -50px;
-  padding: 50px 20px 20px;
+  padding: 30px 20px 20px;
   border-radius: 3em 3em 0 0;
   background-color: #f4f4f4;
 }
@@ -345,7 +344,17 @@ h1, h2 {
 }
 
 .menu-catagory {
+  position: relative;
   margin: 10px 0;
+}
+.menu-catagory:after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #90f0db;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
 }
 
 .fa-heart {
