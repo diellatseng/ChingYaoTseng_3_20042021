@@ -137,7 +137,8 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  background-color: #474747;
+  padding: 30px 20px;
+  background-color: #3a3a3a;
 }
 
 .card {
@@ -189,11 +190,11 @@ h1, h2 {
   align-items: center;
   box-shadow: inset 0 7px 9px -7px #7a7a7a;
   background-color: #e0e0e0;
-  color: #474747;
+  color: #3a3a3a;
 }
 .search-box__icon {
   padding: 10px;
-  color: #474747;
+  color: #3a3a3a;
 }
 .search-box__input {
   font-weight: 500;
@@ -214,7 +215,7 @@ h1, h2 {
   width: 250px;
 }
 .top-banner__descr {
-  color: #474747;
+  color: #545454;
   text-align: center;
 }
 .top-banner__button {
@@ -233,9 +234,8 @@ h1, h2 {
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
-.steps,
-.restaurants {
-  padding: 20px;
+.steps, .restaurants {
+  padding: 0 20px;
 }
 
 .step {
@@ -255,7 +255,7 @@ h1, h2 {
   padding: 2px 6px;
   border-radius: 50%;
   background-color: #9356DC;
-  color: #000;
+  color: #fff;
 }
 .step__icon {
   margin: 0 20px;

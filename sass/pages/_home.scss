@@ -3,11 +3,11 @@
     @include flex(row);
     @include box-shadow(inset);
     background-color: $gray;
-    color: $dark-gray;
+    color: $deep-gray;
 
     &__icon {
         padding: 10px;
-        color: $dark-gray;
+        color: $deep-gray;
     }
 
     &__input {
@@ -41,9 +41,8 @@
     }
 }
 
-.steps,
-.restaurants {
-    padding: 20px;
+.steps, .restaurants {
+    @include page-padding;
 }
 
 .step {

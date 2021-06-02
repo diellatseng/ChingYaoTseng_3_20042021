@@ -1,4 +1,5 @@
 .footer {
     @include flex(column, center, left);
-    background-color: $dark-gray;
+    @include page-padding(30px);
+    background-color: $deep-gray;
 }
