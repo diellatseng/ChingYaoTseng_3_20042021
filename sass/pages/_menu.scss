@@ -5,7 +5,8 @@
 .menu {
     margin-top: -50px;
     @include padding(30px 20px);
-    border-radius: 3em 3em 0 0;
+    border-top-left-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
     background-color: $gray-light;
 
     &__top {

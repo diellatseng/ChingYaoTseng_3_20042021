@@ -1,7 +1,7 @@
 .card {
     position: relative;
     margin: 20px 0;
-    border-radius: 20px;
+    border-radius: $border-radius;
     background-color: white;
 
     &__img {
@@ -9,7 +9,8 @@
         height: 170px;
         object-fit: cover;
         object-position: 50% 60%;
-        border-radius: 10px 10px 0 0;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
     }
 
     &__content {
@@ -37,7 +38,7 @@
     right: 10px;
     top: 10px;
     padding: .4em .7em;
-    border-radius: 2px;
+    border-radius: $border-radius-sm;
     background-color: $green;
     color: $green-dark;
     font-size: .8rem;
