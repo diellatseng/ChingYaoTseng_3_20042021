@@ -3,14 +3,14 @@
     padding: 1.3em 2em;
     border: none;
     border-radius: $border-radius-lg;
-    @include button-shadow;
+    box-shadow: $button-shadow;
     background-image: linear-gradient(to bottom right, $secondary, $primary);
-    color: #fff;
+    color: $text-secondary;
     font-weight: $bold;
     cursor: pointer;
 }
 
 @mixin hover {
-    @include button-shadow($gray-mid);
-        background-image: linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
+    box-shadow: $button-shadow-hover;
+    background-image: linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
 }

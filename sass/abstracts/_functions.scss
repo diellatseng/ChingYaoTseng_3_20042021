@@ -1,7 +1,7 @@
 @function text-color($bg-color) {
     @if (lightness($bg-color) > 60) {
-        @return #000;
+        @return #{$text-primary};
     }   @else {
-        @return #fff;
+        @return #{$text-secondary};
     }
 }

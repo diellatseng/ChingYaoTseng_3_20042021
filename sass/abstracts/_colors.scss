@@ -1,12 +1,16 @@
-$primary : #9356DC;
-$secondary: #FF79DA;
-$accent: #99E2D0;
+$primary:    #9356DC;
+$secondary:  #FF79DA;
+$accent:     #99E2D0;
 
-$gray: #e0e0e0;
-$gray-light: lighten($gray, 8);
-$gray-mid: darken($gray, 40);
-$gray-dark: darken($gray, 55);
-$gray-deep: darken($gray, 65);
+$bg-primary:    #fff;
+$bg-secondary:  darken($bg-primary, 5);
+$bg-accent:     darken($bg-primary, 15);
+$bg-footer:     darken($bg-primary, 80);
 
-$green: #90f0db;
+$text-primary:   #000;
+$text-secondary: #fff;
+$text-accent:    lighten($text-primary, 20);
+$text-icon:      lighten($text-primary, 50);
+
+$green:      #90f0db;
 $green-dark: darken($green, 40);

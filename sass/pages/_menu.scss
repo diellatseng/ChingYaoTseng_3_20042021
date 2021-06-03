@@ -7,7 +7,7 @@
     @include padding(30px 20px);
     border-top-left-radius: $border-radius-lg;
     border-top-right-radius: $border-radius-lg;
-    background-color: $gray-light;
+    background-color: $bg-secondary;
 
     &__top {
         @include flex(row, space-between, center);

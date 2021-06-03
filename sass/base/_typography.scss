@@ -46,11 +46,11 @@ h1, h2 {
 .footer {
     a {
         text-decoration: none;
-        color: text-color($gray-dark);
+        color: text-color($bg-footer);
     }
 
     &__title {
         font-family: 'Shrikhand', cursive;
-        color: text-color($gray-dark);
+        color: text-color($bg-footer);
     }
 }
