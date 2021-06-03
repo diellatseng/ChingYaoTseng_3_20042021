@@ -3,5 +3,11 @@ $border-radius-lg:      2rem;
 $border-radius-sm:     .2rem;
 $border-radius-round:   50%;
 
-$button-shadow:         0 5px 8px rgba(0, 0, 0, .2);
-$button-shadow-hover:   0 5px 8px rgba(0, 0, 0, .5);
+$btn-bg:            linear-gradient(to bottom right, $secondary, $primary);
+$btn-bg-hover:      linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
+$btn-border:        none;
+$btn-margin:        30px 0;
+$btn-padding:       1.3em 2em;
+$btn-shadow:        0 5px 8px rgba(0, 0, 0, .2);
+$btn-shadow-hover:  0 5px 8px rgba(0, 0, 0, .5);
+$btn-width:         13em;

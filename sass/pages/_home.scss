@@ -36,7 +36,7 @@
        @include button;
 
        &:hover {
-            @include hover    
+            @include button(hover);    
         }
     }
 }
@@ -84,3 +84,4 @@
     @extend .steps;
     background-color: $bg-secondary;
 }
+
