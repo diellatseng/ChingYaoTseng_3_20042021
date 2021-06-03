@@ -1,7 +1,7 @@
 .search-box {
-    height: 50px;
     @include flex(row);
     @include box-shadow(inset);
+    height: 50px;
     background-color: $bg-accent;
     color: $text-accent;
 
@@ -16,8 +16,8 @@
 }
 
 .top-banner {
-    height: 300px;
     @include flex;
+    height: 300px;
     padding: 20px;
     background-color: $bg-secondary;
     color: text-color($bg-secondary);
@@ -47,10 +47,10 @@
 
 .step {
     @include flex(row, justify, center);
+    @include box-shadow;
     margin: 20px 0 20px 10px;
     padding: 1.5em 0;
     border-radius: $border-radius;
-    @include box-shadow;
     background-color: $bg-secondary;
 
     &__num {

@@ -4,16 +4,20 @@
 
 .menu {
     @include flex;
-    margin-top: -50px;
     @include padding(30px 20px);
+    margin-top: -50px;
     border-top-left-radius: $border-radius-lg;
     border-top-right-radius: $border-radius-lg;
     background-color: $bg-secondary;
 
     &__top {
-        width: 90vw;
         @include flex(row, space-between, center);
+        width: 90vw;
         margin-bottom: 1.5em;
+    }
+
+    &__title {
+        margin-bottom: 0;
     }
 }
 .menu-catagory {

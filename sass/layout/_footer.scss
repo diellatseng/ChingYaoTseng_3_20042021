@@ -3,6 +3,11 @@
     @include padding(20px);
     background-color: $bg-footer;
 
+    a {
+        text-decoration: none;
+        color: text-color($bg-footer);
+    }
+
     &__title {
         margin-bottom: .5em;
         font-size: 1.2rem;

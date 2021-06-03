@@ -1,9 +1,9 @@
 .card {
-    position: relative;
-    margin: 20px 0;
-    border-radius: $border-radius;
     @include box-shadow;
-    background-color: white;
+    position: relative;
+    margin: $card-margin;
+    border-radius: $border-radius;
+    background-color: $bg-primary;
 
     &__img {
         width: 100%;
@@ -15,11 +15,11 @@
     }
 
     &__content {
-        padding: 10px 0 15px 20px;
+        padding: $card-padding;
     }
 
     &__title {
-      margin-bottom: .2em;
+      margin-bottom: $card-title-margin;
     }
 }
 

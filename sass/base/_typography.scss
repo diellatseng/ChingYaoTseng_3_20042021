@@ -1,18 +1,29 @@
-body {
-    font-size: 17px;
-}
+$font-family-base:      'Roboto', sans-serif;
+$font-family-cursive:   'Shrikhand', cursive;
+
+$font-size-base: 17px;
+$home-h1-font-size: 1.5rem;
+$home-h2-font-size: 1.5rem;
 
 $light:    300;
 $normal:   400;
 $medium:   500;
 $bold:     700;
 
-h1,
+body {
+    font-size: $font-size-base;
+}
+
+h1.title-home,
 h2,
 h3,
 p {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    font-family: $font-family-base;
+}
+
+h1.title-menu,
+h4 {
+    font-family: $font-family-cursive;
 }
 
 h1,
@@ -24,33 +35,26 @@ h3 {
 p {
     font-weight: $normal;
 }
+
 h1, h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-.section-title{
-    margin-top: 20px;
-}
-.menu-title {
-    margin-bottom: 0;
-    font-family: 'Shrikhand', cursive;
-}
-.menu-catagory {
+
+h2.menu-catagory {
     font-size: 1rem;
     font-weight: $light;
     text-transform: uppercase;
 }
+
+h4 {
+    color: text-color($bg-footer);
+}
+
 .dish__descr, .card__descr {
     font-weight: $light;
 }
-.footer {
-    a {
-        text-decoration: none;
-        color: text-color($bg-footer);
-    }
 
-    &__title {
-        font-family: 'Shrikhand', cursive;
-        color: text-color($bg-footer);
-    }
+.section-title{
+    margin-top: 20px;
 }

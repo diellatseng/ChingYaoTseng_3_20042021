@@ -90,12 +90,16 @@ body {
   font-size: 17px;
 }
 
-h1,
+h1.title-home,
 h2,
 h3,
 p {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
+}
+
+h1.title-menu,
+h4 {
+  font-family: "Shrikhand", cursive;
 }
 
 h1,
@@ -113,32 +117,22 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
-.section-title {
-  margin-top: 20px;
-}
-
-.menu-title {
-  margin-bottom: 0;
-  font-family: "Shrikhand", cursive;
-}
-
-.menu-catagory {
+h2.menu-catagory {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+h4 {
+  color: #fff;
 }
 
 .dish__descr, .card__descr {
   font-weight: 300;
 }
 
-.footer a {
-  text-decoration: none;
-  color: #fff;
-}
-.footer__title {
-  font-family: "Shrikhand", cursive;
-  color: #fff;
+.section-title {
+  margin-top: 20px;
 }
 
 .header {
@@ -167,6 +161,10 @@ h1, h2 {
   padding: 20px 20px;
   background-color: #333333;
 }
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
 .footer__title {
   margin-bottom: 0.5em;
   font-size: 1.2rem;
@@ -183,11 +181,11 @@ h1, h2 {
 }
 
 .card {
-  position: relative;
-  margin: 20px 0;
-  border-radius: 1rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  background-color: #fff;
 }
 .card__img {
   width: 100%;
@@ -198,10 +196,10 @@ h1, h2 {
   border-top-right-radius: 1rem;
 }
 .card__content {
-  padding: 10px 0 15px 20px;
+  padding: 1rem;
 }
 .card__title {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
 }
 
 .favorite {
@@ -236,12 +234,12 @@ h1, h2 {
 }
 
 .search-box {
-  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.8);
+  height: 50px;
   background-color: #d9d9d9;
   color: #333333;
 }
@@ -254,11 +252,11 @@ h1, h2 {
 }
 
 .top-banner {
-  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 300px;
   padding: 20px;
   background-color: #f2f2f2;
   color: #000;
@@ -297,10 +295,10 @@ h1, h2 {
   flex-direction: row;
   justify-content: justify;
   align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 0 20px 10px;
   padding: 1.5em 0;
   border-radius: 1rem;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   background-color: #f2f2f2;
 }
 .step__num {
@@ -339,19 +337,22 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -50px;
   padding: 30px 20px 20px;
+  margin-top: -50px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
 }
 .menu__top {
-  width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 90vw;
   margin-bottom: 1.5em;
+}
+.menu__title {
+  margin-bottom: 0;
 }
 
 .menu-catagory {
