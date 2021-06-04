@@ -3,12 +3,9 @@ $font-family-cursive:   'Shrikhand', cursive;
 
 $font-size-base: 17px;
 $h1-font-size: 1.5rem;
-$h2-font-size: 1.2rem;
-$h3-font-size: 1rem;
+$h2-font-size: 1.4rem;
+$h3-font-size: 1.2rem;
 $h4-font-size: 1.2rem;
-
-$home-h2-font-size: 1.5rem;
-$menu-h2-font-size: 1rem;
 
 $light:    300;
 $normal:   400;
@@ -19,38 +16,36 @@ body {
     font-size: $font-size-base;
 }
 
-h1.home-title,
+h1 { font-size: $h1-font-size;}
+h2 { font-size: $h2-font-size;}
+h3 { font-size: $h3-font-size;}
+h4 { font-size: $h4-font-size;}
+
+h1,
+h4 {
+    font-family: $font-family-cursive;
+}
+
 h2,
 h3,
 p {
     font-family: $font-family-base;
 }
 
-h1.menu-title,
-h4 {
-    font-family: $font-family-cursive;
-}
-
-h1, h2 {
-    font-size: $h1-font-size;
-}
-h3, h4 {
-    font-size: $h3-font-size;
-}
-
 h1,
-h2,
-h3 {
-    font-weight: $bold;
-}
-
 h4, 
 p {
     font-weight: $normal;
 }
 
+h2,
+h3 {
+    font-weight: $bold;
+}
+
+
 h2.menu-catagory__title {
-    font-size: $menu-h2-font-size;
+    font-size: $h2-font-size;
     font-weight: $light;
     text-transform: uppercase;
 }
