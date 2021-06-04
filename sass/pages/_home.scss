@@ -25,9 +25,11 @@
 
     &__title {
         width: 250px;
+        margin-bottom: 1em;
     }
 
     &__descr {
+        margin-bottom: 2em;
         color: $text-accent;
         text-align: center;
     }

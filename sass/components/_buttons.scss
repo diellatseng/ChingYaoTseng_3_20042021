@@ -1,7 +1,6 @@
 @mixin button($hover: false, $width: auto) {
     @if $hover==false {
         width:      $width;
-        margin:     $btn-margin;
         padding:    $btn-padding;
         border:     $btn-border;
         border-radius:      $border-radius-lg;

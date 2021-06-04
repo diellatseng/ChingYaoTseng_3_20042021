@@ -102,26 +102,26 @@ h4 {
   font-family: "Shrikhand", cursive;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: 700;
-}
-
 h1, h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 h3, h4 {
   font-size: 1rem;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h4,
 p {
   font-weight: 400;
 }
 
-h2.menu-catagory {
+h2.menu-catagory__title {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -264,14 +264,15 @@ h2.menu-catagory {
 }
 .top-banner__title {
   width: 250px;
+  margin-bottom: 1em;
 }
 .top-banner__descr {
+  margin-bottom: 2em;
   color: #333333;
   text-align: center;
 }
 .top-banner__button {
   width: auto;
-  margin: 30px 0;
   padding: 1.3em 2em;
   border: none;
   border-radius: 2rem;
@@ -336,11 +337,18 @@ h2.menu-catagory {
   z-index: -1;
 }
 
-.menu-wrapper {
-  padding: 30px 20px 20px;
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: -50px;
+  padding: 50px 20px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  background-color: #f2f2f2;
+}
+.menu__wrapper {
   background-color: #f2f2f2;
 }
 
@@ -349,7 +357,6 @@ h2.menu-catagory {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
   margin-bottom: 1.5em;
 }
 
@@ -358,10 +365,13 @@ h2.menu-catagory {
 }
 
 .menu-catagory {
+  margin: 3em 0;
+}
+.menu-catagory__title {
   position: relative;
   margin: 10px 0;
 }
-.menu-catagory:after {
+.menu-catagory__title:after {
   content: "";
   width: 40px;
   height: 3px;
@@ -378,7 +388,6 @@ h2.menu-catagory {
 
 .button {
   width: 13em;
-  margin: 30px 0;
   padding: 1.3em 2em;
   border: none;
   border-radius: 2rem;
