@@ -49,7 +49,7 @@
 }
 
 .button {
-    @include button($width: 13em);
+    @include button($width: 10em);
     @include hover(){
         @include button(hover);
     };

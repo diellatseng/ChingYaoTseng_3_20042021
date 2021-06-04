@@ -7,7 +7,8 @@
         box-shadow:         $btn-shadow;
         background-image:   $btn-bg;
         color:              $text-secondary;
-        font-weight:        $bold;
+        font-size:          $btn-font-size;
+        font-weight:        $medium;
         cursor: pointer;    
     } @else {
         box-shadow:         $btn-shadow-hover;

@@ -2,10 +2,6 @@ $font-family-base:      'Roboto', sans-serif;
 $font-family-cursive:   'Shrikhand', cursive;
 
 $font-size-base: 17px;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.4rem;
-$h3-font-size: 1.2rem;
-$h4-font-size: 1.2rem;
 
 $light:    300;
 $normal:   400;
@@ -28,22 +24,43 @@ body {
         font-family: $font-family-cursive;
     }
     h1 {
-        font-size: $h1-font-size;
+        font-size: 1.54rem;
     }
     h2 {
-        font-size: $h2-font-size;
+        font-size: 1.54rem;
     }
-    h3 {
-        font-size: $h3-font-size * .9;
+
+    h1,
+    h2 {
+        font-weight: $bold;
     }
+}
+.menu {
+    h1,
     h4 {
-        font-size: $h4-font-size;
+        font-family: $font-family-cursive;
+    }
+    h2,
+    h3,
+    p {
+        font-family: $font-family-base;
+    }
+    h1 {
+        font-size: 1.72rem;
+    }
+    h2 {
+        font-size: 1.05rem;
+        font-weight: $light;
+        text-transform: uppercase;
     }
 }
 
-
-h2.menu-catagory__title {
-    font-size: $h2-font-size;
-    font-weight: $light;
-    text-transform: uppercase;
+h3 {
+    font-weight: $bold;
+}
+h3 {
+    font-size: 1.18rem;
+}
+h4 {
+    font-size: 1.18rem;
 }
