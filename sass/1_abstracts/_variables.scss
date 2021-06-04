@@ -1,0 +1,18 @@
+$border-radius:         1rem;
+$border-radius-lg:      2rem;
+$border-radius-sm:     .2rem;
+$border-radius-round:   50%;
+
+$btn-bg:            linear-gradient(to bottom right, $secondary, $primary);
+$btn-bg-hover:      linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));
+$btn-border:        none;
+$btn-padding:       1em 1.5em;
+$btn-font-size:     .9rem;
+$btn-shadow:        0 5px 8px rgba(0, 0, 0, .2);
+$btn-shadow-hover:  0 5px 8px rgba(0, 0, 0, .5);
+$btn-width:         13em;
+
+$card-margin:   2rem 0;
+$card-padding:  1rem;
+
+$card-title-margin: .2rem;

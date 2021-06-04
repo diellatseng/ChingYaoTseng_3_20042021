@@ -1,18 +1,18 @@
-@import 'abstracts/colors';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import '1_abstracts/colors';
+@import '1_abstracts/functions';
+@import '1_abstracts/mixins';
+@import '1_abstracts/variables';
 
-@import 'base/reset';
-@import 'base/typography';
+@import '2_base/reset';
+@import '2_base/typography';
 
-@import 'layout/header';
-@import 'layout/footer';
+@import '3_layout/header';
+@import '3_layout/footer';
 
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/dish';
+@import '4_components/buttons';
+@import '4_components/cards';
+@import '4_components/dish';
 
-@import 'pages/home';
-@import 'pages/menu';
+@import '5_pages/home';
+@import '5_pages/menu';
 

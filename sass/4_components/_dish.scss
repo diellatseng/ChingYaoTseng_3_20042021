@@ -1,0 +1,12 @@
+.dish {
+    width: 90vw;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: $border-radius;
+    @include box-shadow;
+    background-color: white;
+
+    &__descr {
+        font-weight: $light;
+    }
+}

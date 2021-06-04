@@ -1,0 +1,66 @@
+$font-family-base:      'Roboto', sans-serif;
+$font-family-cursive:   'Shrikhand', cursive;
+
+$font-size-base: 17px;
+
+$light:    300;
+$normal:   400;
+$medium:   500;
+$bold:     700;
+
+body {
+    font-size: $font-size-base;
+}
+
+.home {
+    h1,
+    h2,
+    h3,
+    p,
+    ::after {
+        font-family: $font-family-base;
+    }
+    h4 {
+        font-family: $font-family-cursive;
+    }
+    h1 {
+        font-size: 1.54rem;
+    }
+    h2 {
+        font-size: 1.54rem;
+    }
+
+    h1,
+    h2 {
+        font-weight: $bold;
+    }
+}
+.menu {
+    h1,
+    h4 {
+        font-family: $font-family-cursive;
+    }
+    h2,
+    h3,
+    p {
+        font-family: $font-family-base;
+    }
+    h1 {
+        font-size: 1.72rem;
+    }
+    h2 {
+        font-size: 1.05rem;
+        font-weight: $light;
+        text-transform: uppercase;
+    }
+}
+
+h3 {
+    font-weight: $bold;
+}
+h3 {
+    font-size: 1.18rem;
+}
+h4 {
+    font-size: 1.18rem;
+}

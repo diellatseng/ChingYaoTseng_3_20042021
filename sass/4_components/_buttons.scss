@@ -1,0 +1,17 @@
+@mixin button($hover: false, $width: auto) {
+    @if $hover==false {
+        width:      $width;
+        padding:    $btn-padding;
+        border:     $btn-border;
+        border-radius:      $border-radius-lg;
+        box-shadow:         $btn-shadow;
+        background-image:   $btn-bg;
+        color:              $text-secondary;
+        font-size:          $btn-font-size;
+        font-weight:        $medium;
+        cursor: pointer;    
+    } @else {
+        box-shadow:         $btn-shadow-hover;
+        background-image:   $btn-bg-hover;    
+    }
+}

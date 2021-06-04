@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>ohmyfood</title>
 </head>
-<body>
+<body class="home">
     <header class="header">
         <img class="header-logo" src="/images/logo/ohmyfood@2x.svg" alt="logo">
     </header>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="top-banner">
-            <h1 class="top-banner__title">Réservez le menu qui vous convient</h1>
+            <h1 class="top-banner__title home-title">Réservez le menu qui vous convient</h1>
             <p class="top-banner__descr">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <button class="top-banner__button" type="button">
                 Explorer nos restaurants
@@ -56,9 +56,8 @@
         <section class="restaurants">
             <h2 class="section-title" id="restaurants">Restaurants</h2>
 
-            <div class="card">
+            <div class="card" title="Nouveau">
                 <a href="/menus/la-palette-du-gout.html">
-                    <p class="tag">Nouveau</p>
                     <img class="card__img" src="/images/menus/la-palette-du-gout.jpg" alt="Photo: La palette du goût">
                     <div class="card__content">
                         <h3 class="card__title">La palette du goût</h3>
@@ -68,9 +67,8 @@
                 <a href="#"><span class="favorite far fa-heart"></span></a>    
             </div>
 
-            <div class="card"> 
+            <div class="card" title="Nouveau"> 
                 <a href="/menus/la-note-enchantee.html">
-                    <p class="tag">Nouveau</p>
                     <img class="card__img" src="/images/menus/la-note-enchantee.jpg" alt="Photo: La note enchantée">
                     <div class="card__content">
                         <h3 class="card__title">La note enchantée</h3>
@@ -105,7 +103,7 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__title">ohmyfood</p>
+        <h4 class="footer__title">ohmyfood</h4>
         <a class="footer__link" href="#"><span class="footer__icon fas fa-utensils fa-fw fa-xs"></span><p>Proposer un restaurant</p></a>
         <a class="footer__link" href="#"><span class="footer__icon fas fa-hands-helping fa-fw fa-xs"></span><p>Devenir partenaire</p></a>
         <a class="footer__link" href="#"><p>Mentions légales</p></a>
