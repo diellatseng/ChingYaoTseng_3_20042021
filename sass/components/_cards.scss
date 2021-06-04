@@ -25,6 +25,20 @@
     &__descr {
         font-weight: $light;
     }
+
+    &::after {
+        content: attr(title);
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: .4em .7em;
+        border-radius: $border-radius-sm;
+        background-color: $accent;
+        color: darken($accent, 40);
+        font-size: .8rem;
+        font-weight: bold;
+    }
 }
 
 .favorite {
@@ -36,16 +50,4 @@
     &--active {
         background-image: linear-gradient($primary, $secondary);
     }
-}
-
-.tag {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: .4em .7em;
-    border-radius: $border-radius-sm;
-    background-color: $accent;
-    color: darken($accent, 40);
-    font-size: .8rem;
-    font-weight: bold;
 }

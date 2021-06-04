@@ -28,7 +28,8 @@ h4 {
 
 h2,
 h3,
-p {
+p,
+::after {
     font-family: $font-family-base;
 }
 
