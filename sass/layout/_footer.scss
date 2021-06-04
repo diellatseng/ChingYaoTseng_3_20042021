@@ -2,6 +2,10 @@
     @include flex(column, center, left);
     @include padding(20px);
     background-color: $bg-footer;
+    
+    h4 {
+        color: text-color($bg-footer);
+    }
 
     a {
         text-decoration: none;
@@ -10,7 +14,6 @@
 
     &__title {
         margin-bottom: .5em;
-        font-size: 1.2rem;
     }
 
     &__link {

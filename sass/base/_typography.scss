@@ -2,8 +2,13 @@ $font-family-base:      'Roboto', sans-serif;
 $font-family-cursive:   'Shrikhand', cursive;
 
 $font-size-base: 17px;
-$home-h1-font-size: 1.5rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.2rem;
+$h3-font-size: 1rem;
+$h4-font-size: 1.2rem;
+
 $home-h2-font-size: 1.5rem;
+$menu-h2-font-size: 1rem;
 
 $light:    300;
 $normal:   400;
@@ -14,14 +19,14 @@ body {
     font-size: $font-size-base;
 }
 
-h1.title-home,
+h1.home-title,
 h2,
 h3,
 p {
     font-family: $font-family-base;
 }
 
-h1.title-menu,
+h1.menu-title,
 h4 {
     font-family: $font-family-cursive;
 }
@@ -32,29 +37,20 @@ h3 {
     font-weight: $bold;
 }
 
+h1, h2 {
+    font-size: $h1-font-size;
+    margin-bottom: 1rem;
+}
+h3, h4 {
+    font-size: $h3-font-size;
+}
+
 p {
     font-weight: $normal;
 }
 
-h1, h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
 h2.menu-catagory {
-    font-size: 1rem;
+    font-size: $menu-h2-font-size;
     font-weight: $light;
     text-transform: uppercase;
-}
-
-h4 {
-    color: text-color($bg-footer);
-}
-
-.dish__descr, .card__descr {
-    font-weight: $light;
-}
-
-.section-title{
-    margin-top: 20px;
 }

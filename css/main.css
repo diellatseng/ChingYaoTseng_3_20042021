@@ -90,14 +90,14 @@ body {
   font-size: 17px;
 }
 
-h1.title-home,
+h1.home-title,
 h2,
 h3,
 p {
   font-family: "Roboto", sans-serif;
 }
 
-h1.title-menu,
+h1.menu-title,
 h4 {
   font-family: "Shrikhand", cursive;
 }
@@ -108,31 +108,23 @@ h3 {
   font-weight: 700;
 }
 
-p {
-  font-weight: 400;
-}
-
 h1, h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+h3, h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-weight: 400;
 }
 
 h2.menu-catagory {
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
-}
-
-h4 {
-  color: #fff;
-}
-
-.dish__descr, .card__descr {
-  font-weight: 300;
-}
-
-.section-title {
-  margin-top: 20px;
 }
 
 .header {
@@ -161,13 +153,15 @@ h4 {
   padding: 20px 20px;
   background-color: #333333;
 }
+.footer h4 {
+  color: #fff;
+}
 .footer a {
   text-decoration: none;
   color: #fff;
 }
 .footer__title {
   margin-bottom: 0.5em;
-  font-size: 1.2rem;
 }
 .footer__link {
   display: flex;
@@ -201,6 +195,9 @@ h4 {
 .card__title {
   margin-bottom: 0.2rem;
 }
+.card__descr {
+  font-weight: 300;
+}
 
 .favorite {
   position: absolute;
@@ -231,6 +228,9 @@ h4 {
   border-radius: 1rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
+}
+.dish__descr {
+  font-weight: 300;
 }
 
 .search-box {
@@ -270,9 +270,9 @@ h4 {
   text-align: center;
 }
 .top-banner__button {
+  width: auto;
   margin: 30px 0;
   padding: 1.3em 2em;
-  width: 13em;
   border: none;
   border-radius: 2rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
@@ -328,22 +328,23 @@ h4 {
   background-color: #f2f2f2;
 }
 
+.section-title {
+  margin-top: 20px;
+}
+
 .menu-photo {
   z-index: -1;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.menu-wrapper {
   padding: 30px 20px 20px;
   margin-top: -50px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
 }
-.menu__top {
+
+.title-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -351,7 +352,8 @@ h4 {
   width: 90vw;
   margin-bottom: 1.5em;
 }
-.menu__title {
+
+.menu-title {
   margin-bottom: 0;
 }
 
@@ -375,9 +377,9 @@ h4 {
 }
 
 .button {
+  width: 13em;
   margin: 30px 0;
   padding: 1.3em 2em;
-  width: 13em;
   border: none;
   border-radius: 2rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);

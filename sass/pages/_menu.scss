@@ -2,24 +2,23 @@
     z-index: -1;
 }
 
-.menu {
-    @include flex;
+.menu-wrapper {
     @include padding(30px 20px);
     margin-top: -50px;
     border-top-left-radius: $border-radius-lg;
     border-top-right-radius: $border-radius-lg;
     background-color: $bg-secondary;
-
-    &__top {
-        @include flex(row, space-between, center);
-        width: 90vw;
-        margin-bottom: 1.5em;
-    }
-
-    &__title {
-        margin-bottom: 0;
-    }
 }
+.title-wrapper {
+    @include flex(row, space-between, center);
+    width: 90vw;
+    margin-bottom: 1.5em;
+}
+
+.menu-title {
+    margin-bottom: 0;
+}
+
 .menu-catagory {
     position: relative;
     margin: 10px 0;
@@ -40,7 +39,7 @@
 }
 
 .button {
-    @include button;
+    @include button($width: 13em);
 
     &:hover {
         @include button(hover);

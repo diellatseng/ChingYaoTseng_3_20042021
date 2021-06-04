@@ -19,7 +19,11 @@
     }
 
     &__title {
-      margin-bottom: $card-title-margin;
+        margin-bottom: $card-title-margin;
+    }
+
+    &__descr {
+        font-weight: $light;
     }
 }
 
