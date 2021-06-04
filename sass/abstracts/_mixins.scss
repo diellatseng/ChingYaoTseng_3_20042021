@@ -12,7 +12,3 @@
         box-shadow: 0 5px 8px rgba(0, 0, 0, .1);
     }
 }
-
-@mixin padding ($arg1: 0, $arg2: 20px) {
-    padding: $arg1 $arg2;
-}
