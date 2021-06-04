@@ -36,10 +36,9 @@
 
     &__button {
        @include button;
-
-       &:hover {
-            @include button(hover);    
-        }
+       @include hover(){
+           @include button(hover);
+       };
     }
 }
 
