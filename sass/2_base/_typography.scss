@@ -16,32 +16,29 @@ body {
     font-size: $font-size-base;
 }
 
-h1 { font-size: $h1-font-size;}
-h2 { font-size: $h2-font-size;}
-h3 { font-size: $h3-font-size;}
-h4 { font-size: $h4-font-size;}
-
-h1,
-h4 {
-    font-family: $font-family-cursive;
-}
-
-h2,
-h3,
-p,
-::after {
-    font-family: $font-family-base;
-}
-
-h1,
-h4, 
-p {
-    font-weight: $normal;
-}
-
-h2,
-h3 {
-    font-weight: $bold;
+.home {
+    h1,
+    h2,
+    h3,
+    p,
+    ::after {
+        font-family: $font-family-base;
+    }
+    h4 {
+        font-family: $font-family-cursive;
+    }
+    h1 {
+        font-size: $h1-font-size;
+    }
+    h2 {
+        font-size: $h2-font-size;
+    }
+    h3 {
+        font-size: $h3-font-size * .9;
+    }
+    h4 {
+        font-size: $h4-font-size;
+    }
 }
 
 
