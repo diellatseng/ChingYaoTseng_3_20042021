@@ -44,8 +44,8 @@
     top: 10px;
     padding: .4em .7em;
     border-radius: $border-radius-sm;
-    background-color: $green;
-    color: $green-dark;
+    background-color: $accent;
+    color: darken($accent, 40);
     font-size: .8rem;
     font-weight: bold;
 }
