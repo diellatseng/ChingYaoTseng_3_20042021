@@ -1,8 +1,16 @@
 .menu {
+    h1 {
+        @extend %text-cursive;
+        font-size: $h1-font-size;
+    }
+    h2 {
+        font-size: $h2-font-size * .685;
+    }
+
     &__content {
         @include flex;
-        margin-top: -50px;
-        padding: 50px 20px;
+        margin-top: -40px;
+        padding: 35px 20px 75px 20px;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary;
@@ -27,15 +35,18 @@
 }
 
 .menu-catagory {
-    margin: 3em 0;
+    margin: 2em 0;
 
     &__title {
+        @extend %text-uppercase;
+        @extend %font-weight-light;
         position: relative;
-        margin: 10px 0;
     
         &::after {
             content: '';
             display: block;
+            position: absolute;
+            bottom: -7px;
             width: 40px;
             height: 3px;
             background: $accent;
@@ -49,7 +60,7 @@
 }
 
 .button {
-    @include button($width: 10em);
+    @include button($width: 11em);
     @include hover(){
         @include button(hover);
     };
