@@ -4,6 +4,7 @@
     background-color: $bg-footer;
     
     h4 {
+        @extend %text-cursive;
         font-size: $h4-font-size;
         color: text-color($bg-footer);
     }
@@ -18,7 +19,13 @@
     }
 
     &__link {
+        &:nth-child(1), &:nth-child(2) {
+            @extend %font-weight-bold;
+        }
+    }
+    &__link {
         @include flex(row, left, center);
+        font-size: smaller;
         margin: .3em 0;
     }
 

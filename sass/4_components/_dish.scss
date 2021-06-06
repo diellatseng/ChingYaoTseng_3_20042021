@@ -1,11 +1,14 @@
 .dish {
+    @include box-shadow;
     width: 90vw;
     margin: 20px 0;
     padding: 10px;
     border-radius: $border-radius;
-    @include box-shadow;
     background-color: white;
 
+    &__title {
+        @extend %font-weight-bold;
+    }
     &__descr {
         font-weight: $light;
     }

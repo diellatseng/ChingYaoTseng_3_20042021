@@ -19,22 +19,18 @@ body {
     font-weight:    $normal;
 }
 
-@mixin font-size-customized ($size) {
-    font-size: 1em * $size;
-}
-
-.font-weight-bold {
+%font-weight-bold {
     font-weight: $bold;
 }
 
-.font-weight-light {
+%font-weight-light {
     font-weight: $light;
 }
 
-.text-uppercase {
+%text-uppercase {
     text-transform: uppercase;
 }
 
-.text-cursive {
+%text-cursive {
     font-family: $font-family-cursive;
 }

@@ -17,7 +17,6 @@ pre,
 iframe,
 hr,
 h1,
-.home h2,
 h2,
 h3,
 h4,
@@ -27,7 +26,7 @@ h6 {
   padding: 0;
 }
 
-h1, .home h2,
+h1,
 h2,
 h3,
 h4,
@@ -93,19 +92,19 @@ body {
   font-weight: 400;
 }
 
-.font-weight-bold, .step__descr {
+.step__descr, .home h2, .dish__title, .footer__link:nth-child(1), .footer__link:nth-child(2) {
   font-weight: 700;
 }
 
-.font-weight-light {
+.menu-catagory__title {
   font-weight: 300;
 }
 
-.text-uppercase {
+.menu-catagory__title {
   text-transform: uppercase;
 }
 
-.text-cursive {
+.menu h1, .footer h4 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -151,6 +150,7 @@ body {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  font-size: smaller;
   margin: 0.3em 0;
 }
 .footer__icon {
@@ -208,21 +208,25 @@ body {
 }
 
 .dish {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   width: 90vw;
   margin: 20px 0;
   padding: 10px;
   border-radius: 1rem;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 .dish__descr {
   font-weight: 300;
 }
 
-.home h1, .home h2 {
+.home h1 {
   font-size: 1.54rem;
   font-weight: 900;
 }
+.home h2 {
+  font-size: 1.54rem;
+}
+
 .search-box {
   display: flex;
   flex-direction: row;
@@ -321,13 +325,19 @@ body {
   margin-top: 20px;
 }
 
+.menu h1 {
+  font-size: 1.72rem;
+}
+.menu h2 {
+  font-size: 1.0549rem;
+}
 .menu__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -50px;
-  padding: 50px 20px;
+  margin-top: -40px;
+  padding: 35px 20px 75px 20px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
@@ -353,15 +363,16 @@ body {
 }
 
 .menu-catagory {
-  margin: 3em 0;
+  margin: 2em 0;
 }
 .menu-catagory__title {
   position: relative;
-  margin: 10px 0;
 }
 .menu-catagory__title::after {
   content: "";
   display: block;
+  position: absolute;
+  bottom: -7px;
   width: 40px;
   height: 3px;
   background: #99E2D0;
@@ -373,7 +384,7 @@ body {
 }
 
 .button {
-  width: 10em;
+  width: 11em;
   padding: 1em 1.5em;
   border: none;
   border-radius: 2rem;

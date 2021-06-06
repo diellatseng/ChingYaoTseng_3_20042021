@@ -4,7 +4,8 @@
         font-weight: $xbold;
     }
     h2 {
-        @extend h1;
+        @extend %font-weight-bold;
+        font-size: $h2-font-size;
     }
 }
 
@@ -80,7 +81,7 @@
     }
 
     &__descr {
-        @extend .font-weight-bold;
+        @extend %font-weight-bold;
     }
 }
 
