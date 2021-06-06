@@ -20,6 +20,8 @@
 
     &__title {
         margin-bottom: $card-title-margin;
+        font-size: $h3-font-size;
+        font-weight: $bold;
     }
 
     &__descr {
