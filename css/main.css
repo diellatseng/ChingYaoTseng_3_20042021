@@ -183,7 +183,8 @@ body {
 .card__descr {
   font-weight: 300;
 }
-.card::after {
+
+[title]::after {
   content: attr(title);
   display: block;
   position: absolute;
