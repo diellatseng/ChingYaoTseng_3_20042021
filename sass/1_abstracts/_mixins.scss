@@ -14,5 +14,7 @@
 }
 
 @mixin hover() {
-    &:hover { @content; }
-  }
+    &:hover { 
+        @content; 
+    }
+}
