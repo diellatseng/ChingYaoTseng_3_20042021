@@ -42,14 +42,3 @@
     font-size: .8rem;
     font-weight: bold;
 }
-
-.favorite {
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
-    font-size: 1.2em;
-
-    &--active {
-        background-image: linear-gradient($primary, $secondary);
-    }
-}

@@ -19,6 +19,12 @@
     &__wrapper {
         background-color: $bg-secondary;
     }
+
+    .favorite {
+        @include favorite;
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
 }
 
 .menu-photo {
@@ -52,11 +58,6 @@
             background: $accent;
           }
     }
-}
-
-.fa-heart {
-    margin-right: 10px;
-    font-size: 1.5rem;
 }
 
 .button {
