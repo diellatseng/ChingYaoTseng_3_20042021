@@ -15,3 +15,16 @@
         background-image:   $btn-bg-hover;    
     }
 }
+
+@mixin favorite ($stroke-width: .5px) {
+    -webkit-text-stroke: $stroke-width black;
+    color: transparent;
+
+    &:hover, --active {
+        background-image: linear-gradient($primary, $secondary);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: 0;
+    }
+}
