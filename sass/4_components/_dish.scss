@@ -6,9 +6,6 @@
     border-radius: $border-radius;
     background-color: white;
 
-    &__title {
-        @extend %font-weight-bold;
-    }
     &__descr {
         font-weight: $light;
     }

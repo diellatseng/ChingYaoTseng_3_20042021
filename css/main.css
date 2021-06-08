@@ -96,24 +96,38 @@ body {
   font-weight: 400;
 }
 
-h1 {
-  font-size: 1.54rem;
+h1, .h1-font-style {
+  margin: 13px 0 8px 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.72rem;
 }
 
-.step__descr, .home h2, .dish__title, .footer__link:nth-child(1), .footer__link:nth-child(2) {
+h2 {
+  font-size: 1.54rem;
   font-weight: 700;
 }
 
-.menu-catagory__title {
+h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.step__descr, .footer a:nth-child(1), .footer a:nth-child(2) {
+  font-weight: 700;
+}
+
+.menu h2 {
   font-weight: 300;
 }
 
-.menu-catagory__title {
+.menu h2 {
   text-transform: uppercase;
-}
-
-.menu h1, .footer h4 {
-  font-family: "Shrikhand", cursive;
 }
 
 .header {
@@ -129,11 +143,6 @@ h1 {
   font-size: 1.2em;
 }
 
-.header-logo {
-  width: 200px;
-  padding: 20px;
-}
-
 .footer {
   flex-direction: column;
   display: flex;
@@ -142,24 +151,18 @@ h1 {
   padding: 20px;
   background-color: #333333;
 }
-.footer h4 {
-  font-size: 1.18rem;
-  color: #fff;
-}
 .footer a {
-  text-decoration: none;
-  color: #fff;
-}
-.footer__title {
-  margin-bottom: 0.5em;
-}
-.footer__link {
   flex-direction: row;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: smaller;
-  margin: 0.3em 0;
+  margin: 0.5em 0;
+  color: #fff;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+.footer__title {
+  margin-bottom: 0.5em;
 }
 .footer__icon {
   margin-right: 1em;
@@ -253,13 +256,6 @@ h1 {
   font-weight: 300;
 }
 
-.home h1 {
-  font-size: 1.54rem;
-  font-weight: 900;
-}
-.home h2 {
-  font-size: 1.54rem;
-}
 .home .fa-heart {
   position: absolute;
   bottom: 38px;
@@ -290,21 +286,24 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  padding: 20px;
+  height: 270px;
+  padding: 0 20px;
   background-color: #f2f2f2;
   color: #000;
   text-align: center;
 }
 .top-banner__title {
-  width: 250px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  padding: 0 20px;
 }
 .top-banner__descr {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   color: #333333;
   text-align: center;
   font-weight: 300;
+}
+.top-banner__btn {
+  margin-bottom: 1em;
 }
 
 .steps, .restaurants {
@@ -349,11 +348,19 @@ h1 {
   margin-top: 20px;
 }
 
-.menu h1 {
-  font-size: 1.72rem;
-}
 .menu h2 {
   font-size: 1.0549rem;
+  margin: 1em 0 1.5em 0;
+  position: relative;
+}
+.menu h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
 }
 .menu__content {
   flex-direction: column;
@@ -361,13 +368,14 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: -40px;
-  padding: 35px 20px 75px 20px;
+  padding: 22px 20px 80px 20px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
 }
 .menu__wrapper {
   background-color: #f2f2f2;
+  margin-bottom: 30px;
 }
 .menu__btn {
   padding-left: 3em;
@@ -387,27 +395,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5em;
-}
-
-.menu-title {
-  margin-bottom: 0;
-}
-
-.menu-catagory {
-  margin: 2em 0;
-}
-.menu-catagory__title {
-  position: relative;
-}
-.menu-catagory__title::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -7px;
-  width: 40px;
-  height: 3px;
-  background: #99E2D0;
 }
 
 /*# sourceMappingURL=main.css.map */

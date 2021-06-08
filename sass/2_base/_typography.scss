@@ -24,8 +24,26 @@ body {
     font-weight:    $normal;
 }
 
-h1 {
+h1, .h1-font-style {
+    margin: 13px 0 8px 0;
+    font-family: $font-family-cursive;
+    font-size: 1.72rem;
+}
+
+h2 {
     font-size: 1.54rem;
+    font-weight: $bold;
+}
+
+h3 {
+    font-size: 1.18rem;
+    font-weight: $bold;
+}
+
+h4 {
+    font-family: $font-family-cursive;
+    font-size: 1.1rem;
+    color: text-color($bg-footer);
 }
 
 %font-weight-bold {
@@ -38,8 +56,4 @@ h1 {
 
 %text-uppercase {
     text-transform: uppercase;
-}
-
-%text-cursive {
-    font-family: $font-family-cursive;
 }

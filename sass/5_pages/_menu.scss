@@ -1,16 +1,26 @@
 .menu {
-    h1 {
-        @extend %text-cursive;
-        font-size: $h1-font-size;
-    }
     h2 {
+        @extend %text-uppercase;
+        @extend %font-weight-light;
         font-size: $h2-font-size * .685;
+        margin: 1em 0 1.5em 0;
+        position: relative;
+        
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -7px;
+            width: 40px;
+            height: 3px;
+            background: $accent;
+        }
     }
 
     &__content {
         @include flex;
         margin-top: -40px;
-        padding: 35px 20px 75px 20px;
+        padding: 22px 20px 80px 20px;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary;
@@ -18,6 +28,7 @@
     
     &__wrapper {
         background-color: $bg-secondary;
+        margin-bottom: 30px;
     }
 
     &__btn {
@@ -37,30 +48,4 @@
 
 .title-wrapper {
     @include flex(false, space-between, center);
-    margin-bottom: 1.5em;
 } 
-
-.menu-title {
-    margin-bottom: 0;
-}
-
-.menu-catagory {
-    margin: 2em 0;
-
-    &__title {
-        @extend %text-uppercase;
-        @extend %font-weight-light;
-        position: relative;
-    
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -7px;
-            width: 40px;
-            height: 3px;
-            background: $accent;
-          }
-    }
-}
-
