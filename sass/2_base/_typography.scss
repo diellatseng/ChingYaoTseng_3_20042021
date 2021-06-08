@@ -1,7 +1,8 @@
 $font-family-base:      'Roboto', sans-serif;
 $font-family-cursive:   'Shrikhand', cursive;
 
-$font-size-base: 17px;
+$font-size-base: 1rem;
+
 $h1-font-size: 1.72rem;
 $h2-font-size: 1.54rem;
 $h3-font-size: 1.18rem;
@@ -13,10 +14,18 @@ $medium:   500;
 $bold:     700;
 $xbold:    900;
 
+html {
+    font-size: 17px;
+}
+
 body {
     font-size:      $font-size-base;
     font-family:    $font-family-base;
     font-weight:    $normal;
+}
+
+h1 {
+    font-size: 1.54rem;
 }
 
 %font-weight-bold {

@@ -86,10 +86,18 @@ a:active {
   text-decoration: none;
 }
 
-body {
+html {
   font-size: 17px;
+}
+
+body {
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 1.54rem;
 }
 
 .step__descr, .home h2, .dish__title, .footer__link:nth-child(1), .footer__link:nth-child(2) {
@@ -109,8 +117,8 @@ body {
 }
 
 .header {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -127,10 +135,10 @@ body {
 }
 
 .footer {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
   padding: 20px;
   background-color: #333333;
 }
@@ -146,15 +154,31 @@ body {
   margin-bottom: 0.5em;
 }
 .footer__link {
-  display: flex;
   flex-direction: row;
-  justify-content: left;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   font-size: smaller;
   margin: 0.3em 0;
 }
 .footer__icon {
   margin-right: 1em;
+}
+
+.btn {
+  padding: 1em;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 .card {
@@ -226,7 +250,7 @@ body {
   right: 20px;
   font-size: 1.2em;
 }
-.home .favorite:hover, .home .favorite--active {
+.home .favorite:hover, .home .favorite :active, .home .favorite--active {
   background-image: linear-gradient(#9356DC, #FF79DA);
   color: transparent;
   -webkit-text-stroke: 0;
@@ -237,8 +261,8 @@ body {
 }
 
 .search-box {
-  display: flex;
   flex-direction: row;
+  display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.8);
@@ -255,8 +279,8 @@ body {
 }
 
 .top-banner {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -275,30 +299,14 @@ body {
   text-align: center;
   font-weight: 300;
 }
-.top-banner__button {
-  width: auto;
-  padding: 1em 1.5em;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-.top-banner__button:hover {
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
-}
 
 .steps, .restaurants {
   padding: 30px 20px;
 }
 
 .step {
-  display: flex;
   flex-direction: row;
+  display: flex;
   justify-content: justify;
   align-items: center;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
@@ -341,8 +349,8 @@ body {
   font-size: 1.0549rem;
 }
 .menu__content {
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -40px;
@@ -354,6 +362,10 @@ body {
 .menu__wrapper {
   background-color: #f2f2f2;
 }
+.menu__btn {
+  padding-left: 3em;
+  padding-right: 3em;
+}
 .menu .favorite {
   -webkit-text-stroke: 1px black;
   color: transparent;
@@ -361,7 +373,7 @@ body {
   margin-right: 10px;
   font-size: 1.5rem;
 }
-.menu .favorite:hover, .menu .favorite--active {
+.menu .favorite:hover, .menu .favorite :active, .menu .favorite--active {
   background-image: linear-gradient(#9356DC, #FF79DA);
   color: transparent;
   -webkit-text-stroke: 0;
@@ -376,8 +388,8 @@ body {
 }
 
 .title-wrapper {
+  flex-direction: column;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5em;
@@ -401,23 +413,6 @@ body {
   width: 40px;
   height: 3px;
   background: #99E2D0;
-}
-
-.button {
-  width: 11em;
-  padding: 1em 1.5em;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-.button:hover {
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 /*# sourceMappingURL=main.css.map */

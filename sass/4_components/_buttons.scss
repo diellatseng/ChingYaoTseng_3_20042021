@@ -1,18 +1,17 @@
-@mixin button($hover: false, $width: auto) {
-    @if $hover==false {
-        width:      $width;
-        padding:    $btn-padding;
-        border:     $btn-border;
-        border-radius:      $border-radius-lg;
-        box-shadow:         $btn-shadow;
-        background-image:   $btn-bg;
-        color:              $text-secondary;
-        font-size:          $btn-font-size;
-        font-weight:        $medium;
-        cursor: pointer;    
-    } @else {
-        box-shadow:         $btn-shadow-hover;
-        background-image:   $btn-bg-hover;    
+.btn {
+    padding:            1em;
+    border:             none;
+    border-radius:      $border-radius-lg;
+    box-shadow:         0 5px 8px rgba(0, 0, 0, .2);
+    background-image:   linear-gradient(to bottom right, $secondary, $primary);
+    color:              $text-secondary;
+    font-size:          .9rem;
+    font-weight:        $medium;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow:         0 5px 8px rgba(0, 0, 0, .5);
+        background-image:   linear-gradient(to bottom right, lighten($secondary, 5), lighten($primary, 5));   
     }
 }
 
@@ -21,7 +20,7 @@
     color: transparent;
     transform: scale(1);
     
-    &:hover, &--active {
+    &:hover, :active, &--active {
         background-image: linear-gradient($primary, $secondary);
         color: transparent;
         -webkit-text-stroke: 0;

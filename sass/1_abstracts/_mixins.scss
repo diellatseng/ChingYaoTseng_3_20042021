@@ -1,6 +1,10 @@
-@mixin flex ($direction:column, $justify: center, $align:center) {
+@mixin flex ($isDirectionColumn: true, $justify: center, $align: center) {
+    @if $isDirectionColumn {
+        flex-direction: column;
+    } @else {
+        flex-direction: row;
+    }
     display: flex;
-    flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }

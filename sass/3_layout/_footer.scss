@@ -1,5 +1,5 @@
 .footer {
-    @include flex(column, center, left);
+    @include flex(true, center, flex-start);
     padding: 20px;
     background-color: $bg-footer;
     
@@ -24,7 +24,7 @@
         }
     }
     &__link {
-        @include flex(row, left, center);
+        @include flex(false, flex-start, center);
         font-size: smaller;
         margin: .3em 0;
     }

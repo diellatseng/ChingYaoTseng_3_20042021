@@ -20,6 +20,11 @@
         background-color: $bg-secondary;
     }
 
+    &__btn {
+        padding-left:   3em;
+        padding-right:  3em;
+    }
+
     .favorite {
         @include favorite;
         margin-right: 10px;
@@ -60,9 +65,3 @@
     }
 }
 
-.button {
-    @include button($width: 11em);
-    @include hover(){
-        @include button(hover);
-    };
-}
