@@ -29,7 +29,8 @@
     }
 }
 
-[title]::after {
+.new {
+    @include box-shadow;
     content: attr(title);
     display: block;
     position: absolute;

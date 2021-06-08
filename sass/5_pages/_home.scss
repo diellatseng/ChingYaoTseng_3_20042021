@@ -7,11 +7,10 @@
         @extend %font-weight-bold;
         font-size: $h2-font-size;
     }
-    .favorite {
-        @include favorite;
+    .fa-heart {
         position: absolute;
-        bottom: 30px;
-        right: 20px;
+        bottom: 38px;
+        right: 25px;
         font-size: 1.2em;
     }
 }

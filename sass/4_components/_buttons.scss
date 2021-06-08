@@ -15,10 +15,13 @@
     }
 }
 
-@mixin favorite {
+.fa-heart {
+    border: none;
+    background-color: transparent;
     -webkit-text-stroke: 1px black;
     color: transparent;
     transform: scale(1);
+    cursor: pointer;
     
     &:hover, :active, &--active {
         background-image: linear-gradient($primary, $secondary);
