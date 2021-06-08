@@ -1,4 +1,18 @@
 .home {
+    header, main, footer {
+    animation-name: display;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    }
+
+    
+    @keyframes display {
+        to {
+            visibility: visible;
+        }
+    }
+
     .fa-heart {
         position: absolute;
         bottom: 38px;
