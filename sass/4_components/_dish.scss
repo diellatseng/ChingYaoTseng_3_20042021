@@ -5,7 +5,7 @@
     padding: 10px;
     border-radius: $border-radius;
     background-color: white;
-    animation: reveal 1000ms forwards;
+    animation: reveal 1000ms 1 forwards;
     transform: translateY(30px);
     opacity: 0;
     
@@ -26,5 +26,37 @@
 
     &__descr {
         font-weight: $light;
+    }
+
+    &--select {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 28px;
+        background-color: darken($accent, 10);
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        font-size: $h1-font-size;
+        color: text-color(darken($accent, 10));
+        text-align: center;
+        transform-origin: 100%;
+        transform: scaleX(0);
+    }
+}
+
+.dish:hover, .dish:active {
+    cursor: pointer;
+    .dish--select {
+        animation: select-dish 200ms forwards;
+    }
+}
+
+@keyframes select-dish {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
     }
 }

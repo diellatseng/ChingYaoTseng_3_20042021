@@ -336,7 +336,7 @@ h4 {
   padding: 10px;
   border-radius: 1rem;
   background-color: white;
-  animation: reveal 1000ms forwards;
+  animation: reveal 1000ms 1 forwards;
   transform: translateY(30px);
   opacity: 0;
 }
@@ -355,7 +355,37 @@ h4 {
 .dish__descr {
   font-weight: 300;
 }
+.dish--select {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 28px;
+  background-color: #71d7be;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-size: 1.72rem;
+  color: #fff;
+  text-align: center;
+  transform-origin: 100%;
+  transform: scaleX(0);
+}
 
+.dish:hover, .dish:active {
+  cursor: pointer;
+}
+.dish:hover .dish--select, .dish:active .dish--select {
+  animation: select-dish 200ms forwards;
+}
+
+@keyframes select-dish {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 .home header, .home main, .home footer {
   animation-name: display;
   animation-delay: 5s;
