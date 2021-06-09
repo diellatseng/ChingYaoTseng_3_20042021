@@ -22,52 +22,55 @@
     }
 }
 
-.spinner-primary {
+.spinner {
+    @include flex;
+    position: relative;
+}
+.spinner-primary, .spinner-secondary {
+    position: absolute;
+    margin: 0 auto;
     z-index: 2;
-    height: 150px;
-    width:  150px;
     border-radius: $border-radius-round;
-    border-top: $primary solid 2px;
-    border-right : lighten($primary, 30) solid 2px;
-    border-left : lighten($primary, 30) solid 2px;
-    border-bottom : lighten($primary, 30) solid 2px;
-    animation: spin 1000ms cubic-bezier(0.8, 0.8, 0.25, 0.94) 10 alternate;
-    transform: scale(1) rotate(0deg);
+    transform: rotate3d(0, 0, 0, 180deg) scale(.7);
+    animation: spin 1500ms 10 alternate;
+    opacity: .5;
+}
+.spinner-primary {
+    height: 190px;
+    width:  190px;
+    border: $primary 2px solid;
 }
 .spinner-secondary {
-    position: fixed;
-    top: -37px;
-    left: -37px;
-    z-index: 2;
-    height: 220px;
-    width:  220px;
-    border-radius: $border-radius-round;
-    border-top: lighten($secondary, 20) solid 2px;
-    border-right : $secondary solid 2px;
-    border-left : lighten($secondary, 20) solid 2px;
-    border-bottom : lighten($secondary, 20) solid 2px;
-    animation: spin 1000ms cubic-bezier(0.8, 0.8, 0.25, 0.94) 10 alternate;
-    transform: scale(.8) rotate(0deg);
+    height: 150px;
+    width:  150px;
+    border: $secondary 2px solid;
+    animation-delay: 400ms;
+
 }
 
 @keyframes spin {
     to {
-        transform: scale(1.1) rotate(360deg) ;
+        transform: rotate3d(1, 1, 1, 360deg)  scale(1);
+        opacity: 1;
     }
 }
 
 .loading-text {
-    position: fixed;
-    top: 48.5vh;
+    @include flex;
+    height: 150px;
+    width:  150px;
+    position: absolute;
+    margin: auto;
+    background-color: transparent;
     font-family: $font-family-cursive;
-    animation: fade 1000ms cubic-bezier(0.76, 0.79, 0.1, 0.98) 5 alternate;
+    animation: fade 1500ms 10 cubic-bezier(0.9, 0.9, 0.38, 1.01) alternate;
     transform: scale(1);
-    opacity: .3;
+    opacity: .6;
 }
 
 @keyframes fade {
     to {
-        opacity: .7;
         transform: scale(1.1);
+        opacity: 1;
     }    
 }
