@@ -1,3 +1,25 @@
+@keyframes hide {
+    to {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+@keyframes spin {
+    30% {
+        border-radius: 50%;
+    }
+    100% {
+        border-radius: 0;
+        transform: rotate3d(0, 0, 0, 360deg)  scale(1);
+        opacity: 1;
+    }
+}
+@keyframes heart-beat {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }    
+}
 .loader {
     @include flex;
     z-index: 1;
@@ -15,44 +37,30 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes hide {
-    to {
-        z-index: -1;
-        opacity: 0;
-    }
-}
-
 .spinner {
     @include flex;
     position: relative;
 }
 .spinner-primary, .spinner-secondary {
     position: absolute;
-    margin: 0 auto;
+    margin: auto;
     z-index: 2;
-    border-radius: $border-radius-round;
-    transform: rotate3d(0, 0, 0, 180deg) scale(.7);
-    animation: spin 1500ms 10 alternate;
-    opacity: .5;
+    border-radius: 50%;
+    opacity: .7;
+    animation: spin 1500ms 10 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
 }
 .spinner-primary {
-    height: 190px;
-    width:  190px;
-    border: $primary 2px solid;
-}
-.spinner-secondary {
     height: 150px;
     width:  150px;
-    border: $secondary 2px solid;
-    animation-delay: 400ms;
-
+    border: $primary 2px solid;
+    transform: rotate3d(1, 1, 1, 360deg) scale(.5);
 }
-
-@keyframes spin {
-    to {
-        transform: rotate3d(1, 1, 1, 360deg)  scale(1);
-        opacity: 1;
-    }
+.spinner-secondary {
+    height: 110px;
+    width:  110px;
+    border: $secondary 2px solid;
+    transform: rotate3d(-1, -1, 1, 360deg) scale(.5);
+    animation-delay: 200ms;
 }
 
 .loading-text {
@@ -63,14 +71,7 @@
     margin: auto;
     background-color: transparent;
     font-family: $font-family-cursive;
-    animation: fade 1500ms 10 cubic-bezier(0.9, 0.9, 0.38, 1.01) alternate;
-    transform: scale(1);
-    opacity: .6;
-}
-
-@keyframes fade {
-    to {
-        transform: scale(1.1);
-        opacity: 1;
-    }    
+    animation: heart-beat 1500ms 10 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
+    transform: scale(.9);
+    opacity: .4;
 }
