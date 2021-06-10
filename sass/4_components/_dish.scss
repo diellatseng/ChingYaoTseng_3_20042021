@@ -1,54 +1,7 @@
-.dish {
-    @include box-shadow;
-    width: 90vw;
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: $border-radius;
-    background-color: white;
-    animation: reveal 1000ms 1 forwards;
-    transform: translateY(30px);
-    opacity: 0;
-    
-    @keyframes reveal {
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    &:nth-child(2) {
-        animation-delay: 150ms;
-    }
-
-    &:nth-child(3) {
-        animation-delay: 300ms;
-    }
-
-    &__descr {
-        font-weight: $light;
-    }
-
-    &--select {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 28px;
-        background-color: darken($accent, 10);
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-        font-size: $h1-font-size;
-        color: text-color(darken($accent, 10));
-        text-align: center;
-        transform-origin: 100%;
-        transform: scaleX(0);
-    }
-}
-
-.dish:hover, .dish:active {
-    cursor: pointer;
-    .dish--select {
-        animation: select-dish 200ms forwards;
+@keyframes reveal {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -58,5 +11,77 @@
     }
     to {
         transform: scaleX(1);
+    }
+}
+
+.dish {
+    @include box-shadow;
+    width: 90vw;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: $border-radius;
+    background-color: white;
+    animation: reveal 1000ms both 150ms;
+    transform: translateY(30px);
+    opacity: 0;
+    
+    @for $i from 1 to 4 {
+        &:nth-child(#{$i}) {
+            animation-delay: 333ms * ($i - 1) ;
+        }
+    }
+
+    &__descr {
+        font-weight: $light;
+    }
+
+    &__price {
+        align-self: flex-end
+    }
+}
+
+.content-wrapper {
+    @include flex(true, center, flex-start);
+    width: 80%;
+    background-color: rosybrown;
+}
+
+.dish__add {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -50px;
+        height: 50px;
+        width: 50px;
+        background-color: green;
+    }
+    
+    &::after {
+        content: '';
+        display: block;
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+    }
+}
+
+.fa-check-circle {
+    font-size: $h1-font-size;
+    color: text-color(darken($accent, 10));
+}
+
+.dish:hover {
+    cursor: pointer;
+    .fa-check-circle {
+        animation: select-dish 200ms forwards;
     }
 }

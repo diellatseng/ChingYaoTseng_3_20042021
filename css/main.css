@@ -332,55 +332,12 @@ h4 {
   font-weight: bold;
 }
 
-.dish {
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  width: 90vw;
-  margin: 20px 0;
-  padding: 10px;
-  border-radius: 1rem;
-  background-color: white;
-  animation: reveal 1000ms 1 forwards;
-  transform: translateY(30px);
-  opacity: 0;
-}
 @keyframes reveal {
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
-.dish:nth-child(2) {
-  animation-delay: 150ms;
-}
-.dish:nth-child(3) {
-  animation-delay: 300ms;
-}
-.dish__descr {
-  font-weight: 300;
-}
-.dish--select {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 28px;
-  background-color: #71d7be;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  font-size: 1.72rem;
-  color: #fff;
-  text-align: center;
-  transform-origin: 100%;
-  transform: scaleX(0);
-}
-
-.dish:hover, .dish:active {
-  cursor: pointer;
-}
-.dish:hover .dish--select, .dish:active .dish--select {
-  animation: select-dish 200ms forwards;
-}
-
 @keyframes select-dish {
   from {
     transform: scaleX(0);
@@ -389,6 +346,80 @@ h4 {
     transform: scaleX(1);
   }
 }
+.dish {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: white;
+  animation: reveal 1000ms both 150ms;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.dish:nth-child(1) {
+  animation-delay: 0ms;
+}
+.dish:nth-child(2) {
+  animation-delay: 333ms;
+}
+.dish:nth-child(3) {
+  animation-delay: 666ms;
+}
+.dish__descr {
+  font-weight: 300;
+}
+.dish__price {
+  align-self: flex-end;
+}
+
+.content-wrapper {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  background-color: rosybrown;
+}
+
+.dish__add {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+.dish__add::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  height: 50px;
+  width: 50px;
+  background-color: green;
+}
+.dish__add::after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+
+.fa-check-circle {
+  font-size: 1.72rem;
+  color: #fff;
+}
+
+.dish:hover {
+  cursor: pointer;
+}
+.dish:hover .fa-check-circle {
+  animation: select-dish 200ms forwards;
+}
+
 .home header, .home main, .home footer {
   animation-name: display;
   animation-delay: 5s;
