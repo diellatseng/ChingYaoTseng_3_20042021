@@ -5,7 +5,6 @@
     animation-fill-mode: forwards;
     visibility: hidden;
     }
-
     
     @keyframes display {
         to {
@@ -15,9 +14,9 @@
 
     .fa-heart {
         position: absolute;
-        bottom: 38px;
-        right: 25px;
-        font-size: 1.2em;
+        bottom: 32px;
+        right: 18px;
+        font-size: 1.4em;
     }
 }
 
@@ -29,7 +28,8 @@
     color: $text-accent;
 
     &__icon {
-        padding: 10px;
+        position: relative;
+        right: 20px;
         color: $text-accent;
     }
 
@@ -55,6 +55,7 @@
         margin-bottom: 1.5em;
         color: $text-accent;
         text-align: center;
+        font-size: 1.1em;
         font-weight: $light;
     }
     &__btn {
@@ -63,13 +64,17 @@
 }
 
 .steps {
-    padding: 30px 20px;
+    padding: 3em 1.5em;
+
+    &__wrapper {
+        margin-bottom: 20px;
+    }
 }
 
 .step {
     @include flex(false, justify);
     @include box-shadow;
-    margin: 20px 0 20px 10px;
+    margin: 20px 0 0 10px;
     padding: 1.5em 0;
     border-radius: $border-radius;
     background-color: $bg-secondary;
@@ -85,6 +90,7 @@
 
     &__icon {
         margin: 0 15px 0 6px;
+        font-size: 1.2em;
         color: $text-icon;
     }
 
@@ -93,10 +99,10 @@
     }
 }
 
-.step--active {
+.step:hover {
     background-color: lighten($primary, 35);
 
-    &__icon {
+    .step__icon {
         color: $primary;
     }
 }
@@ -107,5 +113,5 @@
 }
 
 .section-title{
-    margin-top: 20px;
+    margin-bottom: 1.1em;
 }

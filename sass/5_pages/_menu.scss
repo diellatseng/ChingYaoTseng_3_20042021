@@ -2,7 +2,6 @@
     h2 {
         @extend %text-uppercase;
         @extend %font-weight-light;
-        font-size: $h2-font-size * .685;
         margin: 1em 0 1.5em 0;
         position: relative;
         
@@ -28,7 +27,7 @@
     
     &__wrapper {
         background-color: $bg-secondary;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__btn {
@@ -48,6 +47,10 @@
 
 .menu-catagory {
     margin-bottom: 2rem;
+
+    &__title {
+        font-size: 1rem
+    }
 }
 
 .title-wrapper {

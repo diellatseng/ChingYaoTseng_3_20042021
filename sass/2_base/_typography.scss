@@ -3,11 +3,6 @@ $font-family-cursive:   'Shrikhand', cursive;
 
 $font-size-base: 1rem;
 
-$h1-font-size: 1.72rem;
-$h2-font-size: 1.54rem;
-$h3-font-size: 1.18rem;
-$h4-font-size: 1.18rem;
-
 $light:    300;
 $normal:   400;
 $medium:   500;
@@ -27,16 +22,16 @@ body {
 h1, .h1-font-style {
     margin: 13px 0 8px 0;
     font-family: $font-family-cursive;
-    font-size: 1.72rem;
+    font-size: 1.9rem;
 }
 
 h2 {
-    font-size: 1.54rem;
+    font-size: 1.56rem;
     font-weight: $bold;
 }
 
 h3 {
-    font-size: 1.18rem;
+    font-size: 1.2rem;
     font-weight: $bold;
 }
 

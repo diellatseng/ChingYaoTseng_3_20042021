@@ -99,16 +99,16 @@ body {
 h1, .h1-font-style {
   margin: 13px 0 8px 0;
   font-family: "Shrikhand", cursive;
-  font-size: 1.72rem;
+  font-size: 1.9rem;
 }
 
 h2 {
-  font-size: 1.54rem;
+  font-size: 1.56rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.18rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -118,7 +118,7 @@ h4 {
   color: #fff;
 }
 
-.step__descr, .footer a:nth-child(1), .footer a:nth-child(2) {
+.step__descr, .footer a:nth-child(2), .footer a:nth-child(3) {
   font-weight: 700;
 }
 
@@ -265,7 +265,7 @@ h4 {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -297,6 +297,10 @@ h4 {
   border-radius: 1rem;
   background-color: #fff;
 }
+.card p {
+  font-size: 1.1em;
+  font-weight: 300;
+}
 .card__img {
   width: 100%;
   height: 170px;
@@ -310,11 +314,6 @@ h4 {
 }
 .card__title {
   margin-bottom: 0.2rem;
-  font-size: 1.18rem;
-  font-weight: 700;
-}
-.card__descr {
-  font-weight: 300;
 }
 
 .new {
@@ -327,9 +326,11 @@ h4 {
   padding: 0.4em 0.7em;
   border-radius: 0.2rem;
   background-color: #99E2D0;
-  color: #278870;
+  color: #32b091;
+}
+.new p {
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @keyframes reveal {
@@ -405,10 +406,10 @@ h4 {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 64px;
+  width: 50px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  background-color: #4acbab;
+  background-color: #99E2D0;
   transform-origin: right;
   transform: scaleX(0);
   opacity: 0;
@@ -416,7 +417,7 @@ h4 {
 }
 
 .fa-check-circle {
-  font-size: 1.72rem;
+  font-size: 1.3rem;
   color: #fff;
   transform: rotate(0);
 }
@@ -448,9 +449,9 @@ h4 {
 }
 .home .fa-heart {
   position: absolute;
-  bottom: 38px;
-  right: 25px;
-  font-size: 1.2em;
+  bottom: 32px;
+  right: 18px;
+  font-size: 1.4em;
 }
 
 .search-box {
@@ -464,7 +465,8 @@ h4 {
   color: #333333;
 }
 .search-box__icon {
-  padding: 10px;
+  position: relative;
+  right: 20px;
   color: #333333;
 }
 .search-box__input {
@@ -490,6 +492,7 @@ h4 {
   margin-bottom: 1.5em;
   color: #333333;
   text-align: center;
+  font-size: 1.1em;
   font-weight: 300;
 }
 .top-banner__btn {
@@ -497,7 +500,10 @@ h4 {
 }
 
 .steps, .restaurants {
-  padding: 30px 20px;
+  padding: 3em 1.5em;
+}
+.steps__wrapper {
+  margin-bottom: 20px;
 }
 
 .step {
@@ -506,7 +512,7 @@ h4 {
   justify-content: justify;
   align-items: center;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0 20px 10px;
+  margin: 20px 0 0 10px;
   padding: 1.5em 0;
   border-radius: 1rem;
   background-color: #f2f2f2;
@@ -521,12 +527,13 @@ h4 {
 }
 .step__icon {
   margin: 0 15px 0 6px;
+  font-size: 1.2em;
   color: gray;
 }
-.step--active {
+.step:hover {
   background-color: #f2eafb;
 }
-.step--active__icon {
+.step:hover .step__icon {
   color: #9356DC;
 }
 
@@ -535,11 +542,10 @@ h4 {
 }
 
 .section-title {
-  margin-top: 20px;
+  margin-bottom: 1.1em;
 }
 
 .menu h2 {
-  font-size: 1.0549rem;
   margin: 1em 0 1.5em 0;
   position: relative;
 }
@@ -565,7 +571,7 @@ h4 {
 }
 .menu__wrapper {
   background-color: #f2f2f2;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .menu__btn {
   padding-left: 3em;
@@ -582,6 +588,9 @@ h4 {
 
 .menu-catagory {
   margin-bottom: 2rem;
+}
+.menu-catagory__title {
+  font-size: 1rem;
 }
 
 .title-wrapper {

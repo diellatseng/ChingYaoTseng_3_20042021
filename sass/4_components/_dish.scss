@@ -67,10 +67,10 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 64px;
+    width: 50px;
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
-    background-color: darken($accent, 20);
+    background-color: $accent,;
     transform-origin: right;
     transform: scaleX(0);
     opacity: 0;
@@ -78,8 +78,8 @@
 }
 
 .fa-check-circle {
-    font-size: $h1-font-size;
-    color: text-color(darken($accent, 20));
+    font-size: 1.3rem;
+    color: text-color($accent);
     transform: rotate(0);
 }
 
