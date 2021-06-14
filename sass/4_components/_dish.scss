@@ -74,7 +74,7 @@
     transform-origin: right;
     transform: scaleX(0);
     opacity: 0;
-    transition: linear 300ms;
+    transition: linear 350ms;
 }
 
 .fa-check-circle {
@@ -92,10 +92,10 @@
     }
     
     .content-wrapper {
-        animation: increase-margin-right 300ms forwards;
+        animation: increase-margin-right 350ms forwards;
     }
     
     .fa-check-circle {
-        animation: check-spin 300ms forwards 100ms;
+        animation: check-spin 350ms forwards 150ms;
     }
 }

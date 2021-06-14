@@ -3,16 +3,21 @@
     padding: 20px;
     background-color: $bg-footer;
 
+    li {
+        margin: .5em 0;
+        
+        &:nth-child(1), &:nth-child(2)
+        {
+            font-weight: $medium;
+        }
+    }
+
     a {
         @include flex(false, flex-start, center);
         margin: .5em 0;
         color: text-color($bg-footer);
         font-size: .9em;
         text-decoration: none;
-        
-        &:nth-child(2), &:nth-child(3) {
-            @extend %font-weight-bold;
-        }
     }
     
     &__title {

@@ -118,7 +118,7 @@ h4 {
   color: #fff;
 }
 
-.step__descr, .footer a:nth-child(2), .footer a:nth-child(3) {
+.step__descr {
   font-weight: 700;
 }
 
@@ -150,6 +150,12 @@ h4 {
   align-items: flex-start;
   padding: 20px;
   background-color: #333333;
+}
+.footer li {
+  margin: 0.5em 0;
+}
+.footer li:nth-child(1), .footer li:nth-child(2) {
+  font-weight: 500;
 }
 .footer a {
   flex-direction: row;
@@ -413,7 +419,7 @@ h4 {
   transform-origin: right;
   transform: scaleX(0);
   opacity: 0;
-  transition: linear 300ms;
+  transition: linear 350ms;
 }
 
 .fa-check-circle {
@@ -430,10 +436,10 @@ h4 {
   opacity: 1;
 }
 .dish:hover .content-wrapper, .dish:active .content-wrapper {
-  animation: increase-margin-right 300ms forwards;
+  animation: increase-margin-right 350ms forwards;
 }
 .dish:hover .fa-check-circle, .dish:active .fa-check-circle {
-  animation: check-spin 300ms forwards 100ms;
+  animation: check-spin 350ms forwards 150ms;
 }
 
 .home header, .home main, .home footer {
@@ -564,7 +570,7 @@ h4 {
   justify-content: center;
   align-items: center;
   margin-top: -40px;
-  padding: 22px 20px 80px 20px;
+  padding: 10px 20px 80px 20px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
