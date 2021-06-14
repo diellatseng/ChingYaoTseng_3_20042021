@@ -1,15 +1,15 @@
 .home {
-    header, main, footer {
     animation-name: display;
-    animation-delay: 5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
-    visibility: hidden;
-    }
+    overflow: hidden;
+    height: 100vh;
     
     @keyframes display {
         to {
-            visibility: visible;
-        }
+            overflow: visible;
+            height: auto;
+        }       
     }
 
     .fa-heart {

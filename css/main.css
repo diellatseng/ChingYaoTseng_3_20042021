@@ -212,7 +212,7 @@ h4 {
 
 .loader {
   animation-name: hide;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -270,10 +270,10 @@ h4 {
   border-radius: 2rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #fff;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  color: #fff;
 }
 .btn:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
@@ -288,7 +288,7 @@ h4 {
   transform: scale(1);
   cursor: pointer;
 }
-.fa-heart:hover, .fa-heart :active, .fa-heart--active {
+.fa-heart:active, .fa-heart:hover {
   background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
@@ -345,16 +345,6 @@ h4 {
     opacity: 1;
   }
 }
-@keyframes check-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes increase-margin-right {
-  to {
-    margin-right: 64px;
-  }
-}
 .dish {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   width: 90vw;
@@ -365,6 +355,7 @@ h4 {
   animation: reveal 1000ms both 150ms;
   transform: translateY(30px);
   opacity: 0;
+  overflow: hidden;
 }
 .dish:nth-child(1) {
   animation-delay: 0ms;
@@ -400,7 +391,9 @@ h4 {
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  right: 0;
   margin-right: 10px;
+  transition: margin-right 350ms;
 }
 
 .add-to-cart-container {
@@ -417,40 +410,41 @@ h4 {
   border-bottom-right-radius: 1rem;
   background-color: #99E2D0;
   transform-origin: right;
-  transform: scaleX(0);
-  opacity: 0;
-  transition: linear 350ms;
+  transform: translateX(100%);
+  transition: all 350ms;
 }
 
 .fa-check-circle {
   font-size: 1.3rem;
   color: #fff;
   transform: rotate(0);
+  transition: transform 350ms;
 }
 
-.dish:hover, .dish:active {
+.dish:active, .dish:hover {
   cursor: pointer;
 }
-.dish:hover .add-to-cart-container, .dish:active .add-to-cart-container {
-  transform: scaleX(1);
-  opacity: 1;
+.dish:active .content-wrapper, .dish:hover .content-wrapper {
+  margin-right: 64px;
 }
-.dish:hover .content-wrapper, .dish:active .content-wrapper {
-  animation: increase-margin-right 350ms forwards;
+.dish:active .add-to-cart-container, .dish:hover .add-to-cart-container {
+  transform: translateX(0);
 }
-.dish:hover .fa-check-circle, .dish:active .fa-check-circle {
-  animation: check-spin 350ms forwards 150ms;
+.dish:active .fa-check-circle, .dish:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 
-.home header, .home main, .home footer {
+.home {
   animation-name: display;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
-  visibility: hidden;
+  overflow: hidden;
+  height: 100vh;
 }
 @keyframes display {
   to {
-    visibility: visible;
+    overflow: visible;
+    height: auto;
   }
 }
 .home .fa-heart {

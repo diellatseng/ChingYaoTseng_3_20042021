@@ -4,10 +4,10 @@
     border-radius:      $border-radius-lg;
     box-shadow:         0 5px 8px rgba(0, 0, 0, .2);
     background-image:   linear-gradient(to bottom right, $secondary, $primary);
-    color:              $text-secondary;
     font-size:          1rem;
     font-weight:        $medium;
     cursor: pointer;
+    color:              $text-secondary;
     
     &:hover {
         box-shadow:         0 5px 8px rgba(0, 0, 0, .5);
@@ -22,8 +22,8 @@
     -webkit-text-stroke: 1px black;
     transform: scale(1);
     cursor: pointer;
-    
-    &:hover, :active, &--active {
+
+    &:active, &:hover {
         background-image: linear-gradient($primary, $secondary);
         background-clip: text;
         -webkit-background-clip: text;
