@@ -46,6 +46,10 @@
     z-index: -1;
 }
 
+.menu-catagory {
+    margin-bottom: 2rem;
+}
+
 .title-wrapper {
     @include flex(false, space-between, center);
 } 

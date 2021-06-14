@@ -87,7 +87,7 @@ a:active {
 }
 
 html {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 body {
@@ -338,12 +338,14 @@ h4 {
     opacity: 1;
   }
 }
-@keyframes select-dish {
-  from {
-    transform: scaleX(0);
-  }
+@keyframes check-spin {
   to {
-    transform: scaleX(1);
+    transform: rotate(360deg);
+  }
+}
+@keyframes increase-margin-right {
+  to {
+    margin-right: 64px;
   }
 }
 .dish {
@@ -366,11 +368,23 @@ h4 {
 .dish:nth-child(3) {
   animation-delay: 666ms;
 }
+.dish__title, .dish__descr {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .dish__descr {
+  width: 85%;
   font-weight: 300;
 }
 .dish__price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
   align-self: flex-end;
+  font-weight: 700;
 }
 
 .content-wrapper {
@@ -378,46 +392,47 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
-  background-color: rosybrown;
+  position: relative;
+  margin-right: 10px;
 }
 
-.dish__add {
+.add-to-cart-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 0;
   top: 0;
-  height: 50px;
-  width: 50px;
-  background-color: red;
-}
-.dish__add::before {
-  content: "";
-  display: block;
-  position: absolute;
+  right: 0;
   bottom: 0;
-  left: -50px;
-  height: 50px;
-  width: 50px;
-  background-color: green;
-}
-.dish__add::after {
-  content: "";
-  display: block;
-  height: 50px;
-  width: 50px;
-  background-color: blue;
+  width: 64px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #4acbab;
+  transform-origin: right;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: linear 300ms;
 }
 
 .fa-check-circle {
   font-size: 1.72rem;
   color: #fff;
+  transform: rotate(0);
 }
 
-.dish:hover {
+.dish:hover, .dish:active {
   cursor: pointer;
 }
-.dish:hover .fa-check-circle {
-  animation: select-dish 200ms forwards;
+.dish:hover .add-to-cart-container, .dish:active .add-to-cart-container {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.dish:hover .content-wrapper, .dish:active .content-wrapper {
+  animation: increase-margin-right 300ms forwards;
+}
+.dish:hover .fa-check-circle, .dish:active .fa-check-circle {
+  animation: check-spin 300ms forwards 100ms;
 }
 
 .home header, .home main, .home footer {
@@ -563,6 +578,10 @@ h4 {
 
 .menu-photo {
   z-index: -1;
+}
+
+.menu-catagory {
+  margin-bottom: 2rem;
 }
 
 .title-wrapper {
