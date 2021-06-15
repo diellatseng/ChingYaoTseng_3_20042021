@@ -145,6 +145,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 .header__button {
   position: absolute;
@@ -457,6 +458,17 @@ h4 {
     align-items: center;
   }
 }
+@media screen and (min-width: 1024px) {
+  .dish {
+    width: 30vw;
+  }
+  .dish__content-wrapper {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .home {
   animation-name: display;
   animation-delay: 3s;
@@ -588,9 +600,7 @@ h4 {
   align-items: center;
   position: relative;
   margin-top: 200px;
-  padding-block-start: 10px;
-  padding-block-end: 80px;
-  padding-inline: 1.5rem;
+  padding: 10px 1.5rem 80px 1.5rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
@@ -628,6 +638,42 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__photo {
+    top: -400px;
+  }
+
+  .menu__container {
+    margin-top: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__container {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .menu__wrapper {
+    width: auto;
+  }
+
+  .menu__photo {
+    position: sticky;
+    top: 60px;
+    width: 40vw;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .menu__btn {
+    position: absolute;
+    bottom: -50px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

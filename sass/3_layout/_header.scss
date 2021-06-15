@@ -1,5 +1,6 @@
 .header {
     @include flex;
+    background-color: $bg-primary;
 
     &__button {
         position: absolute;

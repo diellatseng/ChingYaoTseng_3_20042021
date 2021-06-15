@@ -20,9 +20,7 @@
         @include flex;
         position: relative;
         margin-top: 200px;
-        padding-block-start: 10px;
-        padding-block-end: 80px;
-        padding-inline: 1.5rem;
+        padding: 10px 1.5rem 80px 1.5rem;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary;
@@ -64,3 +62,35 @@
 .title-wrapper {
     @include flex(false, space-between, center);
 } 
+
+@include tablet-only {
+    .menu__photo {
+        top: -400px;
+    }
+
+    .menu__container {
+        margin-top: 400px;
+    }
+}
+
+@include desktop-only {
+    .menu__container {
+        @include flex(false, space-around, flex-start);
+        margin-top: 0;
+    }
+    .menu__wrapper {
+        width: auto;
+    }
+    .menu__photo {
+        position: sticky;
+        top: 60px;
+        width: 40vw;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .menu__btn {
+        position: absolute;
+        bottom: -50px;
+    }
+}

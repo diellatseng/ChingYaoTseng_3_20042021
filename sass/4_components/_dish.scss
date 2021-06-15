@@ -107,3 +107,13 @@
         }
     }
 }
+
+@include desktop-only {
+    .dish {
+        width: 30vw;
+
+        &__content-wrapper {
+            @include flex(true, center, flex-start);
+        }
+    }
+}
