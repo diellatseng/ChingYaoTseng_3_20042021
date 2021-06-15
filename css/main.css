@@ -355,7 +355,6 @@ h4 {
 }
 .dish {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  width: 90vw;
   margin: 20px 0;
   padding: 10px;
   border-radius: 1rem;
@@ -392,8 +391,7 @@ h4 {
   align-self: flex-end;
   font-weight: 700;
 }
-
-.content-wrapper {
+.dish__content-wrapper {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -432,7 +430,7 @@ h4 {
 .dish:active, .dish:hover {
   cursor: pointer;
 }
-.dish:active .content-wrapper, .dish:hover .content-wrapper {
+.dish:active .dish__content-wrapper, .dish:hover .dish__content-wrapper {
   margin-right: 64px;
 }
 .dish:active .add-to-cart-container, .dish:hover .add-to-cart-container {
@@ -442,6 +440,23 @@ h4 {
   transform: rotate(360deg);
 }
 
+@media screen and (min-width: 768px) {
+  .dish {
+    padding: 1rem;
+  }
+  .dish__title, .dish__descr {
+    max-width: 350px;
+  }
+  .dish__descr {
+    width: 100%;
+  }
+  .dish__content-wrapper {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .home {
   animation-name: display;
   animation-delay: 3s;
@@ -566,14 +581,16 @@ h4 {
   height: 3px;
   background: #99E2D0;
 }
-.menu__content {
+.menu__container {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-top: 200px;
-  padding: 10px 20px 80px 20px;
+  padding-block-start: 10px;
+  padding-block-end: 80px;
+  padding-inline: 1.5rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   background-color: #f2f2f2;
@@ -586,8 +603,9 @@ h4 {
   z-index: -1;
 }
 .menu__wrapper {
-  background-color: #f2f2f2;
+  width: 100%;
   margin-bottom: 20px;
+  background-color: #f2f2f2;
 }
 .menu__btn {
   padding-left: 3em;

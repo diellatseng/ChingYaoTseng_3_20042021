@@ -7,7 +7,6 @@
 
 .dish {
     @include box-shadow;
-    width: 90vw;
     margin: 20px 0;
     padding: 10px;
     border-radius: $border-radius;
@@ -43,14 +42,14 @@
         align-self: flex-end;
         font-weight: $bold;
     }
-}
 
-.content-wrapper {
-    @include flex(true, center, flex-start);
-    position: relative;
-    right: 0;
-    margin-right: 10px;
-    transition: margin-right 350ms;
+    &__content-wrapper {
+        @include flex(true, center, flex-start);
+        position: relative;
+        right: 0;
+        margin-right: 10px;
+        transition: margin-right 350ms;
+    }
 }
 
 .add-to-cart-container {
@@ -78,7 +77,7 @@
 .dish:active, .dish:hover {
     cursor: pointer;
     
-    .content-wrapper {
+    .dish__content-wrapper {
         margin-right: 64px;
     }
 
@@ -88,5 +87,23 @@
     
     .fa-check-circle {
         transform: rotate(360deg);
+    }
+}
+
+@include tablet-only {
+    .dish {
+        padding: 1rem;
+
+        &__title {
+           max-width: 350px;
+        }
+
+        &__descr {
+            width: 100%;
+        }
+
+        &__content-wrapper {
+            @include flex(false, flex-start);
+        }
     }
 }

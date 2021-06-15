@@ -16,11 +16,13 @@
         }
     }
 
-    &__content {
+    &__container {
         @include flex;
         position: relative;
         margin-top: 200px;
-        padding: 10px 20px 80px 20px;
+        padding-block-start: 10px;
+        padding-block-end: 80px;
+        padding-inline: 1.5rem;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary;
@@ -35,8 +37,9 @@
     }
     
     &__wrapper {
-        background-color: $bg-secondary;
+        width: 100%;
         margin-bottom: 20px;
+        background-color: $bg-secondary;
     }
 
     &__btn {
