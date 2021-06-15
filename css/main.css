@@ -130,6 +130,16 @@ h4 {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
 .header {
   flex-direction: column;
   display: flex;
