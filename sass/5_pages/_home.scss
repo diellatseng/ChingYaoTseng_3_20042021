@@ -20,7 +20,7 @@
     }
 }
 
-.search-box {
+.location {
     @include flex(false);
     @include box-shadow(inset);
     height: 50px;
@@ -48,7 +48,7 @@
 
     &__title {
         margin-bottom: .5em;
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     &__descr {
@@ -64,7 +64,7 @@
 }
 
 .steps {
-    padding: 3em 1.5em;
+    padding: 3rem 1.5rem;
 
     &__wrapper {
         margin-bottom: 20px;
@@ -72,7 +72,7 @@
 }
 
 .step {
-    @include flex(false, justify);
+    @include flex(false, flex-start);
     @include box-shadow;
     margin: 20px 0 0 10px;
     padding: 1.5em 0;

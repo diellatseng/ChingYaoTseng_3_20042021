@@ -1,6 +1,6 @@
 .footer {
     @include flex(true, center, flex-start);
-    padding: 20px;
+    padding: 1.5rem;
     background-color: $bg-footer;
 
     li {
