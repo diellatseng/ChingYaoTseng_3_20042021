@@ -18,11 +18,20 @@
 
     &__content {
         @include flex;
-        margin-top: -40px;
+        position: relative;
+        margin-top: 200px;
         padding: 10px 20px 80px 20px;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary;
+    }
+
+    &__photo {
+        position: absolute;
+        top: -200px;
+        right: 0;
+        left: 0;
+        z-index: -1;
     }
     
     &__wrapper {
@@ -39,10 +48,6 @@
         margin-right: 10px;
         font-size: 1.5rem;
     }
-}
-
-.menu-photo {
-    z-index: -1;
 }
 
 .menu-catagory {
