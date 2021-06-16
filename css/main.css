@@ -597,9 +597,9 @@ h4 {
   margin-bottom: 1.1em;
 }
 
-@keyframes reveal {
+@keyframes flip {
   to {
-    transform: translateY(0);
+    transform: rotateX(1turn);
     opacity: 1;
   }
 }
@@ -721,10 +721,10 @@ h4 {
     margin: 0 auto;
     object-fit: cover;
     z-index: 0;
-    transition: border-radius 150ms, transform 150ms;
-    animation: reveal 500ms forwards;
-    transform: translateY(20px);
-    opacity: 0.7;
+    transition: border-radius 150ms;
+    animation: flip 1500ms cubic-bezier(0, 0.93, 0.68, 0.93) forwards;
+    transform: rotateX(0.4turn);
+    opacity: 0;
   }
   .menu__photo:hover {
     border-radius: 1rem;
