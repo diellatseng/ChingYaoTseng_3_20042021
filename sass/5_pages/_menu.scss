@@ -1,3 +1,10 @@
+@keyframes reveal {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .menu {
     h2 {
         @extend %text-uppercase;
@@ -79,8 +86,8 @@
         h2 {
             position: sticky;
             top: 3rem;
-            width: 100%;
-            margin: 0;
+            width: 103%;
+            margin-left: -1%;
             padding: 1rem;
             background-color: $bg-secondary;
             z-index: 1;
@@ -125,10 +132,12 @@
             object-fit: cover;
             z-index: 0;
             transition: border-radius 150ms, transform 150ms;
+            animation: reveal 500ms forwards;
+            transform: translateY(20px);
+            opacity: .7;
 
             &:hover {
                 border-radius: $border-radius;
-                transform: scale(1.01);
             }
         }
 

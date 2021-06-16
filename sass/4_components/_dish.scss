@@ -118,7 +118,6 @@
 
         &__content-wrapper {
             @include flex(true, center, flex-start);
-            margin-right: 0;
         }
     }
 }

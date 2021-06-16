@@ -9,3 +9,20 @@
         font-size: 1.2em;
     }
 }
+
+@include desktop-only {
+    .menu {
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            align-items: flex-end;
+            margin-right: 1.5rem;
+            background-color: transparent;
+    
+            &__button {
+                display: none;
+            }
+        }
+    }
+}
