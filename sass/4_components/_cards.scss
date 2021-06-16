@@ -42,3 +42,18 @@
     font-size: .8rem;
     font-weight: $bold;
 }
+
+@include tablet-only {
+
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .card {
+        margin: 0;
+    }
+}

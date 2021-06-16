@@ -108,10 +108,59 @@
 }
 
 .restaurants {
-    @extend .steps;
+    padding: 3rem 1.5rem;
     background-color: $bg-secondary;
 }
 
 .section-title{
     margin-bottom: 1.1em;
 }
+
+@include tablet-only {
+    .home {
+        main {
+            @include flex(true, center, flex-start);
+            flex-wrap: wrap;
+            height: auto;
+            padding: 0 1.5rem;
+        }
+
+        .location,
+        .top-banner,
+        .steps {
+            width: 45vw;
+        }
+
+        .location {
+            height: 10vh;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+            box-shadow: none;
+        }
+        
+        .top-banner {
+            height: 40vh;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+
+        .steps {
+            position: relative;
+            bottom: 50vh;
+            align-self: flex-end;
+            height: 50vh;
+            padding: 1.5rem;
+            background-color: red;
+        }
+
+        .restaurants {
+            width: 100%;
+            margin-top: 2rem;
+            padding: 0;
+        }
+
+        .section-title{
+            margin-bottom: .5em;
+        }
+    }
+};
