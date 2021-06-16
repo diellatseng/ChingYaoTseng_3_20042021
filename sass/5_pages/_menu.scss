@@ -51,7 +51,7 @@
     }
 }
 
-.menu-catagory {
+.menu__catagory {
     margin-bottom: 2rem;
 
     &__title {
@@ -74,23 +74,66 @@
 }
 
 @include desktop-only {
-    .menu__container {
-        @include flex(false, space-around, flex-start);
-        margin-top: 0;
-    }
-    .menu__wrapper {
-        width: auto;
-    }
-    .menu__photo {
-        position: sticky;
-        top: 60px;
-        width: 40vw;
-        object-fit: cover;
-        z-index: 0;
+    .menu {
+        h2 {
+            margin: 1rem 0;
+            left: 1rem;
+
+            &::after {
+                right: 110%;
+                bottom: 0;
+                top: 0;
+                width: 6px;
+                height: 100%;
+            }
+        }
+
+        &__container {
+            @include flex(false, space-around, flex-start);
+            @include box-shadow(true);
+            margin-top: 0;
+            border-radius: 0;
+            background-color: $bg-primary;
+        }
+
+        &__wrapper {
+            width: auto;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            padding: 1rem 1rem;
+            border-radius: $border-radius;
+        }
+
+        &__catagory {
+            @include flex(true, space-between, flex-start);
+            margin-bottom: 0;
+
+        }
+
+        &__photo {
+            @include box-shadow(false, .5);
+            position: sticky;
+            top: 20vh;
+            width: 50vw;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        &__btn {
+            position: fixed;
+            bottom: 10vh;
+            right: 14vw;
+        }
     }
 
-    .menu__btn {
-        position: absolute;
-        bottom: -50px;
+    .title-wrapper {
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 -.5em;
+        padding: 0 1em;
+        background-color: $bg-secondary;
+        z-index: 1;
     }
 }
