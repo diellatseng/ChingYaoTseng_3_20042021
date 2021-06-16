@@ -111,6 +111,7 @@
 @include desktop-only {
     .dish {
         width: 30vw;
+        margin-top: 0;
 
         &__descr {
             width: 85%;

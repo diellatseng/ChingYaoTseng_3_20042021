@@ -85,40 +85,43 @@
     .menu {
         h2 {
             position: sticky;
-            top: 3rem;
+            top: 70px;
             width: 103%;
+            margin-top: 0;
             margin-left: -1%;
-            padding: 1rem;
+            margin-bottom: 0;
+            padding: 1rem 1.5rem;
             background-color: $bg-secondary;
             z-index: 1;
 
             &::after {
-                left: 0;
+                left: .5rem;
                 top: 1rem;
                 width: 6px;
-                height: 1.1rem;
+                height: 1rem;
             }
         }
                 
         &__body {
             flex-direction: row-reverse;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
+            flex-wrap: wrap;
             margin-top: 0;
             margin-left: 5vw;
             border-radius: 0;
             background-color: $bg-primary;
         }
         &__catagory {
-            @include flex(true, space-between, flex-start);
+            @include flex(true, space-between, center);
             margin-bottom: 0;
         }
 
 
         &__wrapper {
-            width: auto;
-            padding: 1rem 1rem;
-            margin-bottom: 0;
+            width: 40vw;
+            padding: 1rem 1rem 2rem 1rem;
+            margin-bottom: -56.44px;
             border-radius: $border-radius;
         }
 
@@ -142,9 +145,8 @@
         }
 
         &__btn {
-            position: fixed;
-            bottom: 10vh;
-            right: 24.5vw;
+            position: sticky;
+            bottom: 5vh;
         }
     }
 
@@ -153,7 +155,7 @@
         top: 0;
         right: 0;
         left: 0;
-        margin: 0 -.5em;
+        margin: 0 -1em;
         padding: 0 1em;
         background-color: $bg-secondary;
         z-index: 2;
