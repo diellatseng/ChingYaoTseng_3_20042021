@@ -112,8 +112,13 @@
     .dish {
         width: 30vw;
 
+        &__descr {
+            width: 85%;
+        }
+
         &__content-wrapper {
             @include flex(true, center, flex-start);
+            margin-right: 0;
         }
     }
 }
