@@ -122,7 +122,7 @@
             @include flex(true, center, flex-start);
             flex-wrap: wrap;
             height: auto;
-            padding: 0 1.5rem;
+            padding: 30px 1.5rem;
         }
 
         .location,
@@ -132,31 +132,37 @@
         }
 
         .location {
-            height: 10vh;
+            height: 5vh;
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             box-shadow: none;
         }
         
         .top-banner {
-            height: 40vh;
+            height: 35vh;
             border-bottom-left-radius: $border-radius;
             border-bottom-right-radius: $border-radius;
         }
 
         .steps {
-            position: relative;
-            bottom: 50vh;
+            @include flex(true, flex-start, stretch);
+            position: absolute;
+            top: 100.6px;
+            right: 1.5rem;
             align-self: flex-end;
-            height: 50vh;
-            padding: 1.5rem;
-            background-color: red;
+            height: 40vh;
+            padding: 0;
+
+            &__wrapper {
+                margin: 0;
+            }
         }
 
         .restaurants {
             width: 100%;
             margin-top: 2rem;
             padding: 0;
+            background-color: $bg-primary;
         }
 
         .section-title{
@@ -164,3 +170,49 @@
         }
     }
 };
+
+@include desktop-only {
+    .home {
+        main {
+            @include flex(true, center, flex-start);
+            flex-wrap: wrap;
+            height: auto;
+            padding: 30px 1.5rem;
+        }
+
+        .location,
+        .top-banner,
+        .steps {
+            width: 27vw;
+        }
+
+        .top-banner,
+        .steps {
+            height: auto;
+        }
+
+        .location {
+            margin-top: 20px;
+        }
+
+        .top-banner {
+            padding: 30px 20px;
+        }
+
+        .steps {
+            position: static;
+            top: 0;
+            right: 0;
+            align-self: unset;
+            padding: 30px 20px;
+        }
+
+        .restaurants {
+            width: 65vw;
+            position: absolute;
+            top: 120.778px;
+            margin-top: 0;
+            align-self: flex-end;
+        }
+    }
+}
