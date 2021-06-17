@@ -520,6 +520,7 @@ h4 {
   animation-fill-mode: forwards;
   overflow: hidden;
   height: 100vh;
+  max-width: 1400px;
 }
 @keyframes display {
   to {
@@ -678,6 +679,9 @@ h4 {
   }
 }
 @media screen and (min-width: 1024px) {
+  .home {
+    margin: 0 auto;
+  }
   .home main {
     flex-direction: column;
     display: flex;
@@ -690,7 +694,7 @@ h4 {
   .home .location,
 .home .top-banner,
 .home .steps {
-    width: 27vw;
+    width: 27%;
   }
   .home .top-banner,
 .home .steps {
@@ -710,11 +714,12 @@ h4 {
     padding: 30px 20px;
   }
   .home .restaurants {
-    width: 65vw;
+    width: 65%;
     position: absolute;
     top: 120.778px;
     margin-top: 0;
     align-self: flex-end;
+    max-width: 910px;
   }
 }
 @keyframes flip {

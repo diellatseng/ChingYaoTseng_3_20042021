@@ -4,6 +4,7 @@
     animation-fill-mode: forwards;
     overflow: hidden;
     height: 100vh;
+    max-width: 1400px;
     
     @keyframes display {
         to {
@@ -173,6 +174,8 @@
 
 @include desktop-only {
     .home {
+        margin: 0 auto;
+
         main {
             @include flex(true, center, flex-start);
             flex-wrap: wrap;
@@ -183,7 +186,7 @@
         .location,
         .top-banner,
         .steps {
-            width: 27vw;
+            width: 27%;
         }
 
         .top-banner,
@@ -208,11 +211,12 @@
         }
 
         .restaurants {
-            width: 65vw;
+            width: 65%;
             position: absolute;
             top: 120.778px;
             margin-top: 0;
             align-self: flex-end;
+            max-width: 910px;
         }
     }
 }
