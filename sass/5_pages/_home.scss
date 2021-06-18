@@ -140,7 +140,6 @@
         }
         
         .top-banner {
-            height: 35vh;
             border-bottom-left-radius: $border-radius;
             border-bottom-right-radius: $border-radius;
         }
@@ -180,13 +179,12 @@
             @include flex(true, center, flex-start);
             flex-wrap: wrap;
             height: auto;
-            padding: 30px 1.5rem;
         }
 
         .location,
         .top-banner,
         .steps {
-            width: 27%;
+            width: 20rem;
         }
 
         .top-banner,
@@ -211,12 +209,12 @@
         }
 
         .restaurants {
-            width: 65%;
             position: absolute;
             top: 120.778px;
             margin-top: 0;
             align-self: flex-end;
             max-width: 910px;
+            width: 35rem;
         }
     }
 }
