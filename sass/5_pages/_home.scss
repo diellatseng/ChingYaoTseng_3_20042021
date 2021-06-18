@@ -179,6 +179,9 @@
         .index-main {
             flex-direction: row;   
             justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            padding: 0;
         }
     
         .home-intro {
@@ -192,11 +195,12 @@
         }
 
         .steps {
-            margin-top: 2rem;
+            margin: 2rem 0 0 0;
         }
 
         .restaurants {
             width: calc(100% / 3 * 2 - 1rem);
+            margin: 0;
         }
     }
 }

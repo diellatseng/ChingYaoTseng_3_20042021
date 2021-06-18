@@ -20,8 +20,12 @@
 
 @include desktop-only {
     .menu {
-        .header__button {
-                display: none;
+        .header {
+            align-items: flex-start;
+
+            &__button {
+                    display: none;
+            }
         }
     }
 }

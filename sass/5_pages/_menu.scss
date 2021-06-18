@@ -106,6 +106,7 @@
         &__main {
             flex-direction: row;
             align-items: flex-start;
+            justify-content: flex-end;
             margin-top: 2rem;
             padding-bottom: 0;
             border-radius: 0;
@@ -133,10 +134,10 @@
             right: 0;
             bottom: 0;
             left: 0;
-            width: 100vw;
-            max-width: 1400px;
-            margin: 0 auto;
+            width: 1400px;
+            height: 1200px;
             object-fit: cover;
+            margin: 0 auto;
         }
 
         &__btn {
