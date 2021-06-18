@@ -1,4 +1,4 @@
-.top-banner__descr, .location__icon, .location {
+.guide__descr, .location__icon, .location {
   color: #3b3b3b;
 }
 
@@ -123,7 +123,7 @@ p {
   padding: 10px;
 }
 
-.top-banner {
+.guide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

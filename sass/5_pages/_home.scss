@@ -39,7 +39,7 @@
     }
 }
 
-.top-banner {
+.guide {
     @include flex;
     height: 270px;
     padding: 0 20px;
@@ -119,43 +119,46 @@
 
 @include tablet-only {
     .home {
-        main {
-            @include flex(true, center, flex-start);
-            flex-wrap: wrap;
-            height: auto;
+        margin: 0 auto;
+
+        .index-main {
+            @include flex;
             padding: 30px 1.5rem;
         }
 
-        .location,
+        .home-intro {
+            @include flex(false, space-between);
+            width: 100%;
+        }
+
         .top-banner,
         .steps {
-            width: 45vw;
+            width: calc(100% / 2 - 1rem);
         }
 
         .location {
-            height: 5vh;
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             box-shadow: none;
         }
         
-        .top-banner {
+        .guide {
             border-bottom-left-radius: $border-radius;
             border-bottom-right-radius: $border-radius;
         }
 
         .steps {
             @include flex(true, flex-start, stretch);
-            position: absolute;
-            top: 100.6px;
-            right: 1.5rem;
-            align-self: flex-end;
-            height: 40vh;
+            margin-left: 1.5rem;
             padding: 0;
 
             &__wrapper {
                 margin: 0;
             }
+        }
+
+        .step {
+            padding: 1em 0;
         }
 
         .restaurants {
@@ -173,48 +176,27 @@
 
 @include desktop-only {
     .home {
-        margin: 0 auto;
-
-        main {
-            @include flex(true, center, flex-start);
-            flex-wrap: wrap;
-            height: auto;
+        .index-main {
+            flex-direction: row;   
+            justify-content: space-between;
         }
-
-        .location,
-        .top-banner,
-        .steps {
-            width: 20rem;
+    
+        .home-intro {
+            flex-direction: column;
+            width: calc(100% / 3 * 1 - 1rem);
         }
 
         .top-banner,
         .steps {
-            height: auto;
-        }
-
-        .location {
-            margin-top: 20px;
-        }
-
-        .top-banner {
-            padding: 30px 20px;
+            width: 100%;
         }
 
         .steps {
-            position: static;
-            top: 0;
-            right: 0;
-            align-self: unset;
-            padding: 30px 20px;
+            margin-top: 2rem;
         }
 
         .restaurants {
-            position: absolute;
-            top: 120.778px;
-            margin-top: 0;
-            align-self: flex-end;
-            max-width: 910px;
-            width: 35rem;
+            width: calc(100% / 3 * 2 - 1rem);
         }
     }
 }

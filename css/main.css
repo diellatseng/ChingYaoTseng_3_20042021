@@ -577,7 +577,7 @@ h4 {
   font-weight: 500;
 }
 
-.top-banner {
+.guide {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -588,18 +588,18 @@ h4 {
   color: #000;
   text-align: center;
 }
-.top-banner__title {
+.guide__title {
   margin-bottom: 0.5em;
   padding: 0 30px;
 }
-.top-banner__descr {
+.guide__descr {
   margin-bottom: 1.5em;
   color: #333333;
   text-align: center;
   font-size: 1.1em;
   font-weight: 300;
 }
-.top-banner__btn {
+.guide__btn {
   margin-bottom: 1em;
 }
 
@@ -651,27 +651,33 @@ h4 {
 }
 
 @media screen and (min-width: 768px) {
-  .home main {
+  .home {
+    margin: 0 auto;
+  }
+  .home .index-main {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    height: auto;
+    align-items: center;
     padding: 30px 1.5rem;
   }
-  .home .location,
-.home .top-banner,
+  .home .home-intro {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .home .top-banner,
 .home .steps {
-    width: 45vw;
+    width: calc(100% / 2 - 1rem);
   }
   .home .location {
-    height: 5vh;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     box-shadow: none;
   }
-  .home .top-banner {
+  .home .guide {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
@@ -680,15 +686,14 @@ h4 {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    position: absolute;
-    top: 100.6px;
-    right: 1.5rem;
-    align-self: flex-end;
-    height: 40vh;
+    margin-left: 1.5rem;
     padding: 0;
   }
   .home .steps__wrapper {
     margin: 0;
+  }
+  .home .step {
+    padding: 1em 0;
   }
   .home .restaurants {
     width: 100%;
@@ -701,46 +706,23 @@ h4 {
   }
 }
 @media screen and (min-width: 1024px) {
-  .home {
-    margin: 0 auto;
+  .home .index-main {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .home main {
+  .home .home-intro {
     flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .home .location,
-.home .top-banner,
-.home .steps {
-    width: 20rem;
+    width: calc(100% / 3 * 1 - 1rem);
   }
   .home .top-banner,
 .home .steps {
-    height: auto;
-  }
-  .home .location {
-    margin-top: 20px;
-  }
-  .home .top-banner {
-    padding: 30px 20px;
+    width: 100%;
   }
   .home .steps {
-    position: static;
-    top: 0;
-    right: 0;
-    align-self: unset;
-    padding: 30px 20px;
+    margin-top: 2rem;
   }
   .home .restaurants {
-    position: absolute;
-    top: 120.778px;
-    margin-top: 0;
-    align-self: flex-end;
-    max-width: 910px;
-    width: 35rem;
+    width: calc(100% / 3 * 2 - 1rem);
   }
 }
 @keyframes flip {
