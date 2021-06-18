@@ -110,7 +110,7 @@
 
 @include desktop-only {
     .dish {
-        width: 30vw;
+        width: auto;
         margin-top: 0;
 
         &__descr {
@@ -120,5 +120,9 @@
         &__content-wrapper {
             @include flex(true, center, flex-start);
         }
+    }
+
+    .dish-container {
+        width: 90%;
     }
 }

@@ -1,7 +1,7 @@
 .footer {
     @include flex(true, center, flex-start);
     padding: 1.5rem;
-    background-color: $bg-footer;
+    background-color: $bg-secondary-800;
 
     li {
         margin: .5em 0;
@@ -15,7 +15,7 @@
     a {
         @include flex(false, flex-start, center);
         margin: .5em 0;
-        color: text-color($bg-footer);
+        color: text-color($bg-secondary-800);
         font-size: .9em;
         text-decoration: none;
     }
@@ -27,4 +27,26 @@
     &__icon {
         margin-right: 1em;
     }
+}
+
+@include tablet-only {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            @include flex(false);
+        }
+
+        li {
+            margin-right: 2em;
+        }
+
+        &__title {
+            margin-right: 2em;
+            margin-bottom: 0;
+        }
+    }
+
 }

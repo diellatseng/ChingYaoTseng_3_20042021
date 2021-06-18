@@ -12,7 +12,6 @@
 
 @include tablet-only {
     .header {
-        @include box-shadow;
         width: 100%;
         align-items: flex-end;
         padding-right: 1.5rem;

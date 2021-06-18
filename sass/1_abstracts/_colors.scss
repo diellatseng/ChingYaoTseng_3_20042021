@@ -2,10 +2,10 @@ $primary:    #9356DC;
 $secondary:  #FF79DA;
 $accent:     #99E2D0;
 
-$bg-primary:    #fff;
-$bg-secondary:  darken($bg-primary, 5);
-$bg-accent:     darken($bg-primary, 10);
-$bg-footer:     darken($bg-primary, 80);
+$bg-primary:         #fff;
+$bg-secondary-200:     darken($bg-primary, 5);
+$bg-secondary-400:     darken($bg-primary, 10);
+$bg-secondary-800:     darken($bg-primary, 80);
 
 $text-primary:   #000;
 $text-secondary: #fff;
