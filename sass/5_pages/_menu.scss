@@ -1,6 +1,13 @@
 @keyframes flip {
     to {
-        transform: rotateX(1turn);
+        transform: rotateY(1turn);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -99,51 +106,46 @@
         &__main {
             flex-direction: row;
             align-items: flex-start;
-            flex-wrap: wrap;
-            margin-top: 0;
-            margin-bottom: 5rem;
+            margin-top: 2rem;
             padding-bottom: 0;
             border-radius: 0;
-            background-color: $bg-primary;
+            background-color: transparent;
         }
         &__catagory {
             @include flex(true, space-between, center);
             margin-bottom: 0;
         }
 
-
         &__wrapper {
-            order: 1;
             width: 40%;
+            margin: 1.5rem;
+            margin-bottom: 5rem;
             padding: 1rem 1rem 2rem 1rem;
-            margin-bottom: -56.44px;
             border-radius: $border-radius;
+            animation: flip 1000ms 150ms forwards;
+            transform: rotateY(.7turn);
+            opacity: 0;
         }
 
-
         &__photo {
-            @include box-shadow(false, .5);
-            position: sticky;
-            top: 20vh;
-            left: 50%;
-            width: 40%;
-            order: 2;
-            z-index: 0;
-            transition: border-radius 150ms;
-            animation: flip 1500ms cubic-bezier(0, 0.93, 0.68, 0.93) forwards;
-            transform: rotateX(.4turn);
-            opacity: 0;
-
-            &:hover {
-                border-radius: $border-radius;
-            }
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            max-width: 1400px;
+            margin: 0 auto;
+            object-fit: cover;
         }
 
         &__btn {
             position: sticky;
-            top: 34rem;
-            bottom: 20vh;
-            order: 3;
+            top: 80%;
+            margin-bottom: 83px;
+            animation: reveal 1200ms 1500ms forwards;
+            transform: translateY(10%);
+            opacity: 0;
         }
     }
 

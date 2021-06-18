@@ -162,12 +162,6 @@ h4 {
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu .header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: transparent;
-  }
   .menu .header__button {
     display: none;
   }
@@ -420,7 +414,9 @@ h4 {
   padding: 10px;
   border-radius: 1rem;
   background-color: white;
-  animation: reveal 1000ms both 150ms;
+  animation-name: reveal;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
   transform: translateY(30px);
   opacity: 0;
   overflow: hidden;
@@ -727,7 +723,13 @@ h4 {
 }
 @keyframes flip {
   to {
-    transform: rotateX(1turn);
+    transform: rotateY(1turn);
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -819,12 +821,10 @@ h4 {
   .menu__main {
     flex-direction: row;
     align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 5rem;
+    margin-top: 2rem;
     padding-bottom: 0;
     border-radius: 0;
-    background-color: #fff;
+    background-color: transparent;
   }
   .menu__catagory {
     flex-direction: column;
@@ -834,33 +834,33 @@ h4 {
     margin-bottom: 0;
   }
   .menu__wrapper {
-    order: 1;
     width: 40%;
+    margin: 1.5rem;
+    margin-bottom: 5rem;
     padding: 1rem 1rem 2rem 1rem;
-    margin-bottom: -56.44px;
     border-radius: 1rem;
-  }
-  .menu__photo {
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 20vh;
-    left: 50%;
-    width: 40%;
-    order: 2;
-    z-index: 0;
-    transition: border-radius 150ms;
-    animation: flip 1500ms cubic-bezier(0, 0.93, 0.68, 0.93) forwards;
-    transform: rotateX(0.4turn);
+    animation: flip 1000ms 150ms forwards;
+    transform: rotateY(0.7turn);
     opacity: 0;
   }
-  .menu__photo:hover {
-    border-radius: 1rem;
+  .menu__photo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    object-fit: cover;
   }
   .menu__btn {
     position: sticky;
-    top: 34rem;
-    bottom: 20vh;
-    order: 3;
+    top: 80%;
+    margin-bottom: 83px;
+    animation: reveal 1200ms 1500ms forwards;
+    transform: translateY(10%);
+    opacity: 0;
   }
 
   .title-wrapper {

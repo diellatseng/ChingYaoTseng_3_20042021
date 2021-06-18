@@ -20,15 +20,8 @@
 
 @include desktop-only {
     .menu {
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            background-color: transparent;
-    
-            &__button {
+        .header__button {
                 display: none;
-            }
         }
     }
 }
