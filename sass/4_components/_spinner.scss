@@ -33,7 +33,7 @@
 
 .loader {
     animation-name: hide;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -47,7 +47,7 @@
     z-index: 2;
     border-radius: 50%;
     opacity: .7;
-    animation: spin 1500ms 10 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
+    animation: spin 1000ms 10 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
 }
 .spinner-primary {
     height: 150px;
@@ -71,7 +71,7 @@
     margin: auto;
     background-color: transparent;
     font-family: $font-family-cursive;
-    animation: heart-beat 1500ms 10 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
-    transform: scale(.9);
+    animation: heart-beat 1000ms 10 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
+    transform: scale(.8);
     opacity: .4;
 }
