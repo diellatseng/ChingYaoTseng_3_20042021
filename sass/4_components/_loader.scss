@@ -1,6 +1,10 @@
-@keyframes hide {
+// Change this to modify loader duration.
+// Can be set up to 3s by default.
+$loader-duration: 2s; 
+
+@keyframes hide { // ASK: everything will be hidden inside .loader <- correct logic?
     to {
-        z-index: -1;
+        z-index: -1; 
         opacity: 0;
     }
 }
@@ -29,14 +33,12 @@
     width: 100vw;
     height: 100vh;
     background-color: $bg-primary;
-}
-
-.loader {
     animation-name: hide;
-    animation-delay: 2s;
+    animation-delay: $loader-duration; 
     animation-fill-mode: forwards;
 }
 
+// Individual spinner animation is played 3 times by default instead of 'infinite' to save CPU usage.
 .spinner {
     @include flex;
     position: relative;
@@ -47,7 +49,7 @@
     z-index: 2;
     border-radius: 50%;
     opacity: .7;
-    animation: spin 1000ms 10 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
+    animation: spin 1000ms 3 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
 }
 .spinner-primary {
     height: 150px;
@@ -62,7 +64,6 @@
     transform: rotate3d(-1, -1, 1, 360deg) scale(.5);
     animation-delay: 200ms;
 }
-
 .loading-text {
     @include flex;
     height: 150px;
@@ -71,7 +72,7 @@
     margin: auto;
     background-color: transparent;
     font-family: $font-family-cursive;
-    animation: heart-beat 1000ms 10 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
+    animation: heart-beat 1000ms 3 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
     transform: scale(.8);
     opacity: .4;
 }
