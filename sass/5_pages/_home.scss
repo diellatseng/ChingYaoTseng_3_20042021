@@ -120,12 +120,13 @@
     .home {
         margin: 0 auto;
 
-        .index-main {
+        .home-main {
             @include flex;
-            padding: 30px 1.5rem;
+            padding: 0 1.5rem;
+            padding-bottom: 50px;
         }
 
-        .home-intro {
+        .intro {
             @include flex(false, space-between);
             width: 100%;
         }
@@ -175,15 +176,15 @@
 
 @include desktop-only {
     .home {
-        .index-main {
+        .home-main {
             flex-direction: row;   
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 50px;
             padding: 0;
+            padding-bottom: 50px;
         }
     
-        .home-intro {
+        .intro {
             flex-direction: column;
             width: calc(100% / 3 * 1 - 1rem);
         }

@@ -29,7 +29,7 @@
     }
 }
 
-@include tablet-only {
+@include desktop-only {
     .footer {
         flex-direction: row;
         justify-content: space-between;
