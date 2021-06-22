@@ -119,6 +119,7 @@
 
 @include tablet-only {
     .home {
+        
         .home-main {
             @include flex;
             padding-bottom: 50px;
@@ -180,6 +181,9 @@
             flex-direction: row;   
             justify-content: space-between;
             align-items: flex-start;
+            max-width: 1400px;
+            margin-right: auto;
+            margin-left: auto;
             padding-bottom: 50px;
         }
     

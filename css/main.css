@@ -154,24 +154,12 @@ h4 {
   font-size: 1.2em;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    width: 100%;
-    align-items: flex-end;
-    padding-right: 1.5rem;
-  }
-}
 @media screen and (min-width: 1024px) {
+  .header h1 {
+    cursor: default;
+  }
   .header__button {
     display: none;
-  }
-
-  .home .header {
-    padding-right: 0;
-  }
-
-  .menu .header {
-    align-items: flex-start;
   }
 }
 .footer {
@@ -708,6 +696,9 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 50px;
   }
   .home .intro {

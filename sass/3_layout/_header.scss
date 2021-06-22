@@ -10,28 +10,14 @@
     }
 }
 
-@include tablet-only {
-    .header {
-        width: 100%;
-        align-items: flex-end;
-        padding-right: 1.5rem;
-    }
-}
-
 @include desktop-only {
-    .header__button {
-        display: none;
-    } 
-
-    .home {
-        .header {
-            padding-right: 0;
+    .header {
+        h1 {
+            cursor: default;
         }
-    }
-
-    .menu {
-        .header {
-            align-items: flex-start;
-        }
+        
+        &__button {
+            display: none;
+        } 
     }
 }
