@@ -1,0 +1,13 @@
+.container {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.5rem;
+}
+
+@include tablet-only {
+    .container {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}

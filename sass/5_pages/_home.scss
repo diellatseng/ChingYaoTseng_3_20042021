@@ -10,7 +10,6 @@
     animation-fill-mode: forwards;
     overflow: hidden;
     height: 100vh;
-    max-width: 1400px;
     
     .fa-heart {
         position: absolute;
@@ -64,7 +63,8 @@
 }
 
 .steps {
-    padding: 3rem 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     &__wrapper {
         margin-bottom: 20px;
@@ -108,7 +108,8 @@
 }
 
 .restaurants {
-    padding: 3rem 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: $bg-secondary-200;
 }
 
@@ -118,11 +119,8 @@
 
 @include tablet-only {
     .home {
-        margin: 0 auto;
-
         .home-main {
             @include flex;
-            padding: 0 1.5rem;
             padding-bottom: 50px;
         }
 
@@ -134,6 +132,11 @@
         .top-banner,
         .steps {
             width: calc(100% / 2 - 1rem);
+        }
+
+        .top-banner {
+            padding: 1.5rem;
+            padding-right: 0;
         }
 
         .location {
@@ -150,7 +153,6 @@
         .steps {
             @include flex(true, flex-start, stretch);
             margin-left: 1.5rem;
-            padding: 0;
 
             &__wrapper {
                 margin: 0;
@@ -163,8 +165,6 @@
 
         .restaurants {
             width: 100%;
-            margin-top: 2rem;
-            padding: 0;
             background-color: $bg-primary;
         }
 
@@ -180,7 +180,6 @@
             flex-direction: row;   
             justify-content: space-between;
             align-items: flex-start;
-            padding: 0;
             padding-bottom: 50px;
         }
     

@@ -1,11 +1,12 @@
 .footer {
-    @include flex(true, center, flex-start);
-    padding: 1.5rem;
+    width: 100%;
     background-color: $bg-secondary-800;
 
+    .container {
+        @include flex(true, center, flex-start);
+    }
+
     li {
-        margin: .5em 0;
-        
         &:nth-child(1), &:nth-child(2)
         {
             font-weight: $medium;
@@ -15,9 +16,9 @@
     a {
         @include flex(false, flex-start, center);
         margin: .5em 0;
-        color: text-color($bg-secondary-800);
         font-size: .9em;
         text-decoration: none;
+        color: text-color($bg-secondary-800);
     }
     
     &__title {
@@ -31,22 +32,22 @@
 
 @include desktop-only {
     .footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         ul {
             @include flex(false);
         }
 
         li {
-            margin-right: 2em;
+            margin-left: 2em;
         }
 
         &__title {
-            margin-right: 2em;
             margin-bottom: 0;
         }
     }
-
 }

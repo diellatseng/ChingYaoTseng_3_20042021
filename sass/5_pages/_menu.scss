@@ -13,8 +13,6 @@
 }
 
 .menu {
-    max-width: 1400px;
-
     h2 {
         @extend %text-uppercase;
         @extend %font-weight-light;
@@ -33,13 +31,17 @@
     }
 
     &__main {
-        @include flex;
         position: relative;
         margin-top: 200px;
-        padding: 10px 1.5rem 80px 1.5rem;
+        padding-top: 10px;
+        padding-bottom: 80px;
         border-top-left-radius: $border-radius-lg;
         border-top-right-radius: $border-radius-lg;
         background-color: $bg-secondary-200;
+
+        & .container {
+            @include flex;
+        }
     }
 
     &__photo {
@@ -81,7 +83,6 @@
 
 @include desktop-only {
     .menu {
-        margin: 0 auto;
         height: auto;
 
         h2 {

@@ -175,15 +175,14 @@ h4 {
   }
 }
 .footer {
+  width: 100%;
+  background-color: #333333;
+}
+.footer .container {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 1.5rem;
-  background-color: #333333;
-}
-.footer li {
-  margin: 0.5em 0;
 }
 .footer li:nth-child(1), .footer li:nth-child(2) {
   font-weight: 500;
@@ -194,9 +193,9 @@ h4 {
   justify-content: flex-start;
   align-items: center;
   margin: 0.5em 0;
-  color: #fff;
   font-size: 0.9em;
   text-decoration: none;
+  color: #fff;
 }
 .footer__title {
   margin-bottom: 0.5em;
@@ -206,7 +205,7 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
-  .footer {
+  .footer .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -218,10 +217,9 @@ h4 {
     align-items: center;
   }
   .footer li {
-    margin-right: 2em;
+    margin-left: 2em;
   }
   .footer__title {
-    margin-right: 2em;
     margin-bottom: 0;
   }
 }
@@ -253,7 +251,7 @@ h4 {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
@@ -550,7 +548,6 @@ h4 {
   animation-fill-mode: forwards;
   overflow: hidden;
   height: 100vh;
-  max-width: 1400px;
 }
 .home .fa-heart {
   position: absolute;
@@ -605,7 +602,8 @@ h4 {
 }
 
 .steps {
-  padding: 3rem 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .steps__wrapper {
   margin-bottom: 20px;
@@ -643,7 +641,8 @@ h4 {
 }
 
 .restaurants {
-  padding: 3rem 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: #f2f2f2;
 }
 
@@ -652,15 +651,11 @@ h4 {
 }
 
 @media screen and (min-width: 768px) {
-  .home {
-    margin: 0 auto;
-  }
   .home .home-main {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1.5rem;
     padding-bottom: 50px;
   }
   .home .intro {
@@ -673,6 +668,10 @@ h4 {
   .home .top-banner,
 .home .steps {
     width: calc(100% / 2 - 1rem);
+  }
+  .home .top-banner {
+    padding: 1.5rem;
+    padding-right: 0;
   }
   .home .location {
     border-top-left-radius: 1rem;
@@ -689,7 +688,6 @@ h4 {
     justify-content: flex-start;
     align-items: stretch;
     margin-left: 1.5rem;
-    padding: 0;
   }
   .home .steps__wrapper {
     margin: 0;
@@ -699,8 +697,6 @@ h4 {
   }
   .home .restaurants {
     width: 100%;
-    margin-top: 2rem;
-    padding: 0;
     background-color: #fff;
   }
   .home .section-title {
@@ -712,7 +708,6 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0;
     padding-bottom: 50px;
   }
   .home .intro {
@@ -743,9 +738,6 @@ h4 {
     opacity: 1;
   }
 }
-.menu {
-  max-width: 1400px;
-}
 .menu h2 {
   margin: 1em 0 1.5em 0;
   position: relative;
@@ -760,16 +752,19 @@ h4 {
   background: #99E2D0;
 }
 .menu__main {
+  position: relative;
+  margin-top: 200px;
+  padding-top: 10px;
+  padding-bottom: 80px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: #f2f2f2;
+}
+.menu__main .container {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-top: 200px;
-  padding: 10px 1.5rem 80px 1.5rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  background-color: #f2f2f2;
 }
 .menu__photo {
   position: absolute;
@@ -808,7 +803,6 @@ h4 {
 
 @media screen and (min-width: 1024px) {
   .menu {
-    margin: 0 auto;
     height: auto;
   }
   .menu h2 {
@@ -883,6 +877,19 @@ h4 {
     padding: 0 1em;
     background-color: #f2f2f2;
     z-index: 2;
+  }
+}
+.container {
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 

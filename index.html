@@ -9,17 +9,18 @@
     <!--Import Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/prefixed/main.css">
+    <!-- <link rel="stylesheet" href="css/prefixed/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
     <title>ohmyfood</title>
 </head>    
 <body class="home">
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="spinner">
             <div class="spinner-primary"></div>
             <div class="spinner-secondary"></div>
             <div class="loading-text"><p>ohmyfood</p></div>
         </div>
-    </div>
+    </div> -->
 
     <header class="header">
         <h1>ohmyfood</h1>
@@ -27,11 +28,11 @@
     <main class="home-main">
         <section class="intro">
             <div class="top-banner">
-                <div class="location">
+                <div class="location container">
                     <p class="location__input"><span class="location__icon fas fa-map-marker-alt"></span>Paris, Belleville</p>
                 </div>
         
-                <div class="guide">
+                <div class="guide container">
                     <h2 class="guide__title">Réservez le menu qui vous convient</h2>
                     <p class="guide__descr">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                     <button class="guide__btn btn" type="button">
@@ -40,7 +41,7 @@
                 </div>
             </div>
             
-            <div class="steps">
+            <div class="steps container">
                 <h2 class="section-title">Fonctionnement</h2>
                 <div class="steps__wrapper">
                     <div class="step">
@@ -64,8 +65,7 @@
             </div>
         </section>
 
-
-        <section class="restaurants">
+        <section class="restaurants container">
             <h2 class="section-title" id="restaurants">Restaurants</h2>
             <div class="card-wrapper">
                 <div class="card">
@@ -118,13 +118,15 @@
     </main>
 
     <footer class="footer">
-        <h4 class="footer__title">ohmyfood</h4>
-        <ul>
-            <li><a href="#"><p><span class="footer__icon fas fa-utensils fa-fw fa-xs"></span>Proposer un restaurant</p></a></li>
-            <li><a href="#"><p><span class="footer__icon fas fa-hands-helping fa-fw fa-xs"></span>Devenir partenaire</p></a></li>
-            <li><a href="#"><p>Mentions légales</p></a></li>
-            <li><a href="mailto:contact@ohmyfood.fr"><p>Contact</p></a></li>
-        </ul>
+        <div class="container">
+            <h4 class="footer__title">ohmyfood</h4>
+            <ul>
+                <li><a href="#"><p><span class="footer__icon fas fa-utensils fa-fw fa-xs"></span>Proposer un restaurant</p></a></li>
+                <li><a href="#"><p><span class="footer__icon fas fa-hands-helping fa-fw fa-xs"></span>Devenir partenaire</p></a></li>
+                <li><a href="#"><p>Mentions légales</p></a></li>
+                <li><a href="mailto:contact@ohmyfood.fr"><p>Contact</p></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

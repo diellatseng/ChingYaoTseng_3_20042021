@@ -26,7 +26,7 @@ $loader-duration: $loader-delay + 2s; // Change this to modify loader duration. 
 .loader {
     @include flex;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100vw;
