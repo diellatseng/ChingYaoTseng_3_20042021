@@ -155,6 +155,10 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .header h1 {
     cursor: default;
   }
@@ -197,6 +201,7 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 3rem;
   }
   .footer ul {
     flex-direction: row;
@@ -420,6 +425,9 @@ h4 {
 }
 .dish:nth-child(3) {
   animation-delay: 666ms;
+}
+.dish:nth-child(4) {
+  animation-delay: 999ms;
 }
 .dish__title, .dish__descr {
   width: 100%;
@@ -709,12 +717,16 @@ h4 {
 .home .steps {
     width: 100%;
   }
+  .home .top-banner {
+    padding-top: 0;
+  }
   .home .steps {
     margin: 2rem 0 0 0;
   }
   .home .restaurants {
     width: calc(100% / 3 * 2 - 1rem);
     margin: 0;
+    padding-top: 0;
   }
 }
 @keyframes flip {
@@ -815,8 +827,10 @@ h4 {
   }
   .menu__main {
     margin-top: 0;
+    margin-bottom: 100px;
     background-color: #fff;
     padding-bottom: 0;
+    padding-top: 0;
   }
   .menu__main .container {
     flex-direction: row;
@@ -826,6 +840,7 @@ h4 {
     flex-wrap: wrap;
     height: auto;
     margin-bottom: 3rem;
+    padding-top: 0;
   }
   .menu__catagory {
     flex-direction: column;
@@ -835,27 +850,36 @@ h4 {
     margin-bottom: 0;
   }
   .menu__wrapper {
-    width: 40%;
-    padding: 1rem 1rem 2rem 1rem;
+    width: 45%;
+    padding: 2rem;
     margin-bottom: 0;
     border-radius: 1rem;
     animation: flip 1000ms 150ms forwards;
     transform: rotateY(0.7turn);
     opacity: 0;
+    transition: box-shadow 700ms;
+  }
+  .menu__wrapper:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   }
   .menu__photo {
     position: sticky;
     top: 1.5rem;
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
+    width: 52%;
+    margin-right: auto;
     z-index: 0;
+    animation: reveal 1500ms forwards;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: border-bottom-right-radius 300ms, border-top-left-radius 300ms;
+  }
+  .menu__photo:hover {
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
   }
   .menu__btn {
-    margin-top: 1.5rem;
-    animation: reveal 1200ms 1500ms forwards;
-    transform: translateY(10%);
-    opacity: 0;
+    position: absolute;
+    bottom: -70px;
   }
 
   .title-wrapper {

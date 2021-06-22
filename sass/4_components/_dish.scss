@@ -18,7 +18,7 @@
     opacity: 0;
     overflow: hidden;
     
-    @for $i from 1 to 4 {
+    @for $i from 1 to 5 {
         &:nth-child(#{$i}) {
             animation-delay: 333ms * ($i - 1) ;
         }

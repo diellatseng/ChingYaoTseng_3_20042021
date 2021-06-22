@@ -197,6 +197,10 @@
             width: 100%;
         }
 
+        .top-banner {
+            padding-top: 0;
+        }
+
         .steps {
             margin: 2rem 0 0 0;
         }
@@ -204,6 +208,7 @@
         .restaurants {
             width: calc(100% / 3 * 2 - 1rem);
             margin: 0;
+            padding-top: 0;
         }
     }
 }
