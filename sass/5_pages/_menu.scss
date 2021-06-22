@@ -103,16 +103,20 @@
                 height: 1rem;
             }
         }
-                
+
         &__main {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-end;
-            margin-top: 2rem;
+            margin-top: 0;
+            background-color: $bg-primary;
             padding-bottom: 0;
-            border-radius: 0;
-            background-color: transparent;
+
+            .container {
+                @include flex(false, center, flex-start);
+                flex-wrap: wrap;
+                height: auto;
+                margin-bottom: 3rem;
+            }
         }
+                
         &__catagory {
             @include flex(true, space-between, center);
             margin-bottom: 0;
@@ -120,9 +124,8 @@
 
         &__wrapper {
             width: 40%;
-            margin: 1.5rem;
-            margin-bottom: 5rem;
             padding: 1rem 1rem 2rem 1rem;
+            margin-bottom: 0;
             border-radius: $border-radius;
             animation: flip 1000ms 150ms forwards;
             transform: rotateY(.7turn);
@@ -130,21 +133,16 @@
         }
 
         &__photo {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 1400px;
-            height: 1200px;
-            object-fit: cover;
+            position: sticky;
+            top: 1.5rem;
+            width: 50%;
+            height: auto;
             margin: 0 auto;
+            z-index: 0;
         }
 
         &__btn {
-            position: sticky;
-            top: 80%;
-            margin-bottom: 83px;
+            margin-top: 1.5rem;
             animation: reveal 1200ms 1500ms forwards;
             transform: translateY(10%);
             opacity: 0;
