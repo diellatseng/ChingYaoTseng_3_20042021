@@ -429,7 +429,7 @@ h4 {
 .dish:nth-child(4) {
   animation-delay: 999ms;
 }
-.dish__title, .dish__descr {
+.dish__title {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -437,6 +437,9 @@ h4 {
 }
 .dish__descr {
   width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 300;
 }
 .dish__price {
@@ -500,17 +503,19 @@ h4 {
   .dish {
     padding: 1rem;
   }
-  .dish__title, .dish__descr {
-    max-width: 350px;
-  }
-  .dish__descr {
-    width: 100%;
-  }
   .dish__content-wrapper {
     flex-direction: row;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+  .dish__title {
+    width: auto;
+    margin-right: 1em;
+  }
+  .dish__descr {
+    width: auto;
+    padding-right: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -520,6 +525,7 @@ h4 {
   }
   .dish__descr {
     width: 85%;
+    padding-right: 0;
   }
   .dish__content-wrapper {
     flex-direction: column;
@@ -804,6 +810,14 @@ h4 {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .menu__main {
+    margin-top: 400px;
+  }
+  .menu__photo {
+    top: -400px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .menu {
     height: auto;

@@ -1,3 +1,6 @@
+$photo-height-for-mobile: 200px;
+$photo-height-for-tablet: 400px;
+
 @keyframes flip {
     to {
         transform: rotateY(1turn);
@@ -32,7 +35,7 @@
 
     &__main {
         position: relative;
-        margin-top: 200px;
+        margin-top: $photo-height-for-mobile;
         padding-top: 10px;
         padding-bottom: 80px;
         border-top-left-radius: $border-radius-lg;
@@ -46,7 +49,7 @@
 
     &__photo {
         position: absolute;
-        top: -200px;
+        top: -$photo-height-for-mobile;
         right: 0;
         left: 0;
         z-index: -1;
@@ -80,6 +83,18 @@
 .title-wrapper {
     @include flex(false, space-between, center);
 } 
+
+@include tablet-only {
+    .menu {
+        &__main {
+            margin-top: $photo-height-for-tablet;
+        }
+
+        &__photo {
+            top: -$photo-height-for-tablet;
+        }
+    }
+}
 
 @include desktop-only {
     .menu {
