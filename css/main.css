@@ -159,9 +159,6 @@ h4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .header h1 {
-    cursor: default;
-  }
   .header__button {
     display: none;
   }
@@ -727,7 +724,7 @@ h4 {
     padding-top: 0;
   }
   .home .steps {
-    margin: 2rem 0 0 0;
+    margin: 0;
   }
   .home .restaurants {
     width: calc(100% / 3 * 2 - 1rem);
