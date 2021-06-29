@@ -848,10 +848,10 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;
     height: auto;
     margin-bottom: 3rem;
     padding-top: 0;
+    column-gap: 1.5rem;
   }
   .menu__catagory {
     flex-direction: column;
@@ -861,7 +861,7 @@ h4 {
     margin-bottom: 0;
   }
   .menu__wrapper {
-    width: 45%;
+    width: 50%;
     padding: 2rem;
     margin-bottom: 0;
     border-radius: 1rem;
@@ -876,17 +876,15 @@ h4 {
   .menu__photo {
     position: sticky;
     top: 1.5rem;
-    width: 52%;
-    margin-right: auto;
+    width: 50%;
     z-index: 0;
     animation: reveal 1500ms forwards;
     transform: translateY(50px);
     opacity: 0;
-    transition: border-bottom-right-radius 300ms, border-top-left-radius 300ms;
+    transition: border-radius 300ms;
   }
   .menu__photo:hover {
-    border-bottom-right-radius: 2rem;
-    border-top-left-radius: 2rem;
+    border-radius: 2rem;
   }
   .menu__btn {
     position: absolute;
