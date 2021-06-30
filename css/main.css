@@ -906,7 +906,7 @@ h4 {
   .title-wrapper::before {
     content: "";
     position: absolute;
-    top: -1.5rem;
+    top: -1.51rem;
     left: -10px;
     right: -10px;
     height: 3rem;
