@@ -6,7 +6,7 @@
 }
 .home {
     animation-name: display;
-    animation-delay: $loader-duration;
+    animation-delay: $spinner-duration;
     animation-fill-mode: forwards;
     overflow: hidden;
     height: 100vh;

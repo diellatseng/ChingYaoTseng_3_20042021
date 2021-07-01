@@ -1,5 +1,5 @@
-$loader-delay: 100ms;
-$loader-duration: $loader-delay + 2s; // Change this to modify loader duration. Up to 3s by default.
+$spinner-delay: 100ms;
+$spinner-duration: $spinner-delay + 2000ms; // Change this to modify spinner duration. Up to 3s by default.
 
 @keyframes hide { 
     to {
@@ -17,13 +17,13 @@ $loader-duration: $loader-delay + 2s; // Change this to modify loader duration. 
         opacity: 1;
     }
 }
-@keyframes heart-beat {
+@keyframes pulse {
     to {
         transform: scale(1);
         opacity: 1;
     }    
 }
-.loader {
+.spinner-background {
     @include flex;
     z-index: 1;
     position: fixed;
@@ -33,7 +33,7 @@ $loader-duration: $loader-delay + 2s; // Change this to modify loader duration. 
     height: 100vh;
     background-color: $bg-primary;
     animation-name: hide;
-    animation-delay: $loader-duration; 
+    animation-delay: $spinner-duration; 
     animation-fill-mode: forwards;
 }
 
@@ -41,28 +41,32 @@ $loader-duration: $loader-delay + 2s; // Change this to modify loader duration. 
 .spinner {
     @include flex;
     position: relative;
+
+    &__primary, &__secondary {
+        position: absolute;
+        margin: auto;
+        z-index: 2;
+        border-radius: 50%;
+        opacity: .7;
+        animation: spin 1000ms 4 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
+    }
+
+    &__primary {
+        height: 150px;
+        width:  150px;
+        border: $primary 2px solid;
+        transform: rotate3d(1, 1, 1, 360deg) scale(.5);
+    }
+
+    &__secondary {
+        height: 110px;
+        width:  110px;
+        border: $secondary 2px solid;
+        transform: rotate3d(-1, -1, 1, 360deg) scale(.5);
+        animation-delay: 200ms;
+    }
 }
-.spinner-primary, .spinner-secondary {
-    position: absolute;
-    margin: auto;
-    z-index: 2;
-    border-radius: 50%;
-    opacity: .7;
-    animation: spin 1000ms 4 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
-}
-.spinner-primary {
-    height: 150px;
-    width:  150px;
-    border: $primary 2px solid;
-    transform: rotate3d(1, 1, 1, 360deg) scale(.5);
-}
-.spinner-secondary {
-    height: 110px;
-    width:  110px;
-    border: $secondary 2px solid;
-    transform: rotate3d(-1, -1, 1, 360deg) scale(.5);
-    animation-delay: 200ms;
-}
+
 .loading-text {
     @include flex;
     height: 150px;
@@ -71,7 +75,7 @@ $loader-duration: $loader-delay + 2s; // Change this to modify loader duration. 
     margin: auto;
     background-color: transparent;
     font-family: $font-family-cursive;
-    animation: heart-beat 1000ms 4 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
+    animation: pulse 1000ms 4 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
     transform: scale(.8);
     opacity: .4;
 }
