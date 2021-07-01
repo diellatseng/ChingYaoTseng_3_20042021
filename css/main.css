@@ -213,93 +213,6 @@ h4 {
     margin-bottom: 0;
   }
 }
-@keyframes hide {
-  to {
-    z-index: -1;
-    opacity: 0;
-  }
-}
-@keyframes spin {
-  30% {
-    border-radius: 50%;
-  }
-  100% {
-    border-radius: 0;
-    transform: rotate3d(0, 0, 0, 360deg) scale(1);
-    opacity: 1;
-  }
-}
-@keyframes heart-beat {
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.loader {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  animation-name: hide;
-  animation-delay: 2100ms;
-  animation-fill-mode: forwards;
-}
-
-.spinner {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.spinner-primary, .spinner-secondary {
-  position: absolute;
-  margin: auto;
-  z-index: 2;
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: spin 1000ms 4 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
-}
-
-.spinner-primary {
-  height: 150px;
-  width: 150px;
-  border: #9356DC 2px solid;
-  transform: rotate3d(1, 1, 1, 360deg) scale(0.5);
-}
-
-.spinner-secondary {
-  height: 110px;
-  width: 110px;
-  border: #FF79DA 2px solid;
-  transform: rotate3d(-1, -1, 1, 360deg) scale(0.5);
-  animation-delay: 200ms;
-}
-
-.loading-text {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  margin: auto;
-  background-color: transparent;
-  font-family: "Shrikhand", cursive;
-  animation: heart-beat 1000ms 4 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
-  transform: scale(0.8);
-  opacity: 0.4;
-}
-
 .btn {
   padding: 1em;
   border: none;
@@ -535,6 +448,90 @@ h4 {
     width: 90%;
   }
 }
+@keyframes hide {
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  30% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0;
+    transform: rotate3d(0, 0, 0, 360deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.spinner-background {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  animation-name: hide;
+  animation-delay: 2100ms;
+  animation-fill-mode: forwards;
+}
+
+.spinner {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.spinner__primary, .spinner__secondary {
+  position: absolute;
+  margin: auto;
+  z-index: 2;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: spin 1000ms 4 alternate cubic-bezier(0.21, 1, 0.13, 1.01);
+}
+.spinner__primary {
+  height: 150px;
+  width: 150px;
+  border: #9356DC 2px solid;
+  transform: rotate3d(1, 1, 1, 360deg) scale(0.5);
+}
+.spinner__secondary {
+  height: 110px;
+  width: 110px;
+  border: #FF79DA 2px solid;
+  transform: rotate3d(-1, -1, 1, 360deg) scale(0.5);
+  animation-delay: 200ms;
+}
+
+.loading-text {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  margin: auto;
+  background-color: transparent;
+  font-family: "Shrikhand", cursive;
+  animation: pulse 1000ms 4 cubic-bezier(0.21, 1, 0.13, 1.01) alternate;
+  transform: scale(0.8);
+  opacity: 0.4;
+}
+
 @keyframes display {
   to {
     overflow: visible;
@@ -620,8 +617,7 @@ h4 {
   background-color: #f2f2f2;
 }
 .step__num {
-  position: relative;
-  right: 10px;
+  transform: translateX(-10px);
   padding: 2px 7px;
   border-radius: 50%;
   background-color: #9356DC;
