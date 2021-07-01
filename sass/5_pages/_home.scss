@@ -80,8 +80,7 @@
     background-color: $bg-secondary-200;
 
     &__num {
-        position: relative;
-        right: 10px;
+        transform: translateX(-10px);
         padding: 2px 7px;
         border-radius: $border-radius-round;
         background-color: $primary;
