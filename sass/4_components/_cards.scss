@@ -17,7 +17,7 @@
         object-position: center;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
-        transition: object-position 500ms;
+        transition: object-position 500ms ease-out;
     }
 
     &__content {
@@ -62,6 +62,8 @@
 @include desktop-only {
     .card:hover {
         @include box-shadow(false, .25);
+        transform: scale(1.05);
+        transition: transform 250ms ease-out;
 
         .card__img {
             object-position: 50% 60%;
