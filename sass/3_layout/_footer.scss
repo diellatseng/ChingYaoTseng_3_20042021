@@ -45,6 +45,11 @@
 
         li {
             margin-left: 2em;
+            transition: transform 150ms ease-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
 
         &__title {
