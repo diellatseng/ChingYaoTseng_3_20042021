@@ -201,6 +201,12 @@ h4 {
 }
 
 @media screen and (min-width: 1024px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   .footer .grid {
     grid-template-columns: 200px 1fr 50%;
   }
@@ -730,7 +736,7 @@ h4 {
     max-width: 1400px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
   }
   .home .container {
     padding-right: 0;
@@ -841,6 +847,7 @@ h4 {
 @media screen and (min-width: 1024px) {
   .menu {
     height: auto;
+    padding-bottom: 90px;
   }
   .menu h2 {
     position: sticky;

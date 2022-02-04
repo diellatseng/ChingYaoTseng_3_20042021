@@ -46,6 +46,11 @@
 
 @include desktop-only {
   .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     .grid {
       grid-template-columns: 200px 1fr 50%;
     }

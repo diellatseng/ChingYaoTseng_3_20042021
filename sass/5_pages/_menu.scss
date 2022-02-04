@@ -99,6 +99,7 @@ $photo-height-for-tablet: 400px;
 @include desktop-only {
     .menu {
         height: auto;
+        padding-bottom: 90px;
 
         h2 {
             position: sticky;
