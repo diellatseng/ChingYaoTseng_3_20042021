@@ -1,59 +1,86 @@
 .footer {
-    width: 100%;
-    background-color: $bg-secondary-800;
+  width: 100%;
+  background-color: $bg-secondary-800;
 
-    .container {
-        @include flex(true, center, flex-start);
-    }
+  .grid {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-    li {
-        &:nth-child(1), &:nth-child(2)
-        {
-            font-weight: $medium;
-        }
-    }
+  ul {
+    text-align: end;
+  }
 
-    a {
-        @include flex(false, flex-start, center);
-        margin: .5em 0;
-        font-size: .9em;
-        text-decoration: none;
-        color: text-color($bg-secondary-800);
+  li {
+    &:nth-child(1),
+    &:nth-child(2) {
+      font-weight: $medium;
     }
-    
-    &__title {
-        margin-bottom: .5em;
-    }
+  }
+  a {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: text-color($bg-secondary-800);
+  }
 
-    &__icon {
-        margin-right: 1em;
-    }
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__icon {
+    margin-right: 1em;
+  }
+}
+
+.note {
+  color: white;
+  margin-bottom: 1rem;
+
+  & > a {
+    display: inline;
+    text-decoration: underline;
+  }
 }
 
 @include desktop-only {
-    .footer {
-        .container {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 3rem;
-        }
-
-        ul {
-            @include flex(false);
-        }
-
-        li {
-            margin-left: 2em;
-            transition: transform 150ms ease-out;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-
-        &__title {
-            margin-bottom: 0;
-        }
+  .footer {
+    .grid {
+      grid-template-columns: 200px 1fr 50%;
     }
+
+    ul {
+      @include flex(false);
+    }
+
+    li {
+      margin-left: 2em;
+      transition: transform 150ms ease-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+
+  .note {
+    margin: 0;
+
+    a {
+      transition: color 150ms ease-out;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .grid-item {
+    align-self: center;
+  }
 }

@@ -2,7 +2,7 @@
     to {
         overflow: visible;
         height: auto;
-    }       
+    }
 }
 .home {
     animation-name: display;
@@ -10,7 +10,7 @@
     animation-fill-mode: forwards;
     overflow: hidden;
     height: 100vh;
-    
+
     .fa-heart {
         position: absolute;
         bottom: 32px;
@@ -20,198 +20,197 @@
 }
 
 .location {
-    @include flex(false);
-    @include box-shadow(inset);
-    height: 50px;
-    background-color: $bg-secondary-400;
+  @include flex(false);
+  @include box-shadow(inset);
+  height: 50px;
+  background-color: $bg-secondary-400;
+  color: $text-accent;
+
+  &__icon {
+    position: relative;
+    right: 20px;
     color: $text-accent;
+  }
 
-    &__icon {
-        position: relative;
-        right: 20px;
-        color: $text-accent;
-    }
-
-    &__input {
-        font-weight: $medium;
-    }
+  &__input {
+    font-weight: $medium;
+  }
 }
 
 .guide {
-    @include flex;
-    height: 270px;
-    padding: 0 20px;
-    background-color: $bg-secondary-200;
-    color: text-color($bg-secondary-200);
+  @include flex;
+  height: 270px;
+  padding: 0 20px;
+  background-color: $bg-secondary-200;
+  color: text-color($bg-secondary-200);
+  text-align: center;
+
+  &__title {
+    margin-bottom: 0.5em;
+    padding: 0 30px;
+  }
+
+  &__descr {
+    margin-bottom: 1.5em;
+    color: $text-accent;
     text-align: center;
-
-    &__title {
-        margin-bottom: .5em;
-        padding: 0 30px;
-    }
-
-    &__descr {
-        margin-bottom: 1.5em;
-        color: $text-accent;
-        text-align: center;
-        font-size: 1.1em;
-        font-weight: $light;
-    }
-    &__btn {
-        margin-bottom: 1em;
-    }
+    font-size: 1.1em;
+    font-weight: $light;
+  }
+  &__btn {
+    margin-bottom: 1em;
+  }
 }
 
 .steps {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
-    &__wrapper {
-        margin-bottom: 20px;
-    }
+  &__wrapper {
+    margin-bottom: 20px;
+  }
 }
 
 .step {
-    @include flex(false, flex-start);
-    @include box-shadow;
-    margin: 20px 0 0 10px;
-    padding: 1.5em 0;
-    border-radius: $border-radius;
-    background-color: $bg-secondary-200;
+  @include flex(false, flex-start);
+  @include box-shadow;
+  margin: 20px 0 0 10px;
+  padding: 1.5em 0;
+  border-radius: $border-radius;
+  background-color: $bg-secondary-200;
 
-    &__num {
-        transform: translateX(-10px);
-        padding: 2px 7px;
-        border-radius: $border-radius-round;
-        background-color: $primary;
-        color: text-color($primary);
-    }
+  &__num {
+    transform: translateX(-10px);
+    padding: 2px 7px;
+    border-radius: $border-radius-round;
+    background-color: $primary;
+    color: text-color($primary);
+  }
 
-    &__icon {
-        margin: 0 15px 0 6px;
-        font-size: 1.2em;
-        color: $text-icon;
-    }
+  &__icon {
+    margin: 0 15px 0 6px;
+    font-size: 1.2em;
+    color: $text-icon;
+  }
 
-    &__descr {
-        @extend %font-weight-bold;
-    }
+  &__descr {
+    @extend %font-weight-bold;
+  }
 }
 
 .step:hover {
-    background-color: lighten($primary, 35);
+  background-color: lighten($primary, 35);
 
-    .step__icon {
-        color: $primary;
-    }
+  .step__icon {
+    color: $primary;
+  }
 }
 
 .restaurants {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: $bg-secondary-200;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $bg-secondary-200;
 }
 
-.section-title{
-    margin-bottom: 1.1em;
+.section-title {
+  margin-bottom: 1.1em;
 }
 
 @include tablet-only {
-    .home {
-        
-        .home-main {
-            @include flex;
-            padding-bottom: 50px;
-        }
-
-        .intro {
-            @include flex(false, space-between);
-            width: 100%;
-        }
-
-        .top-banner,
-        .steps {
-            width: calc(100% / 2 - 1rem);
-        }
-
-        .top-banner {
-            padding: 1.5rem;
-            padding-right: 0;
-        }
-
-        .location {
-            border-top-left-radius: $border-radius;
-            border-top-right-radius: $border-radius;
-            box-shadow: none;
-        }
-        
-        .guide {
-            border-bottom-left-radius: $border-radius;
-            border-bottom-right-radius: $border-radius;
-        }
-
-        .steps {
-            @include flex(true, flex-start, stretch);
-            margin-left: 1.5rem;
-
-            &__wrapper {
-                margin: 0;
-            }
-        }
-
-        .step {
-            padding: 1em 0;
-        }
-
-        .restaurants {
-            width: 100%;
-            background-color: $bg-primary;
-        }
-
-        .section-title{
-            margin-bottom: .5em;
-        }
+  .home {
+    .home-main {
+      @include flex;
+      padding-bottom: 50px;
     }
-};
+
+    .intro {
+      @include flex(false, space-between);
+      width: 100%;
+    }
+
+    .top-banner,
+    .steps {
+      width: calc(100% / 2 - 1rem);
+    }
+
+    .top-banner {
+      padding: 1.5rem;
+      padding-right: 0;
+    }
+
+    .location {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      box-shadow: none;
+    }
+
+    .guide {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    .steps {
+      @include flex(true, flex-start, stretch);
+      margin-left: 1.5rem;
+
+      &__wrapper {
+        margin: 0;
+      }
+    }
+
+    .step {
+      padding: 1em 0;
+    }
+
+    .restaurants {
+      width: 100%;
+      background-color: $bg-primary;
+    }
+
+    .section-title {
+      margin-bottom: 0.5em;
+    }
+  }
+}
 
 @include desktop-only {
-    .home {
-        .home-main {
-            flex-direction: row;   
-            justify-content: space-between;
-            align-items: flex-start;
-            max-width: 1400px;
-            margin-right: auto;
-            margin-left: auto;
-            padding-bottom: 50px;
-        }
-        
-        .container {
-            padding-right: 0;
-        }
-        
-        .intro {
-            flex-direction: column;
-            width: calc(100% / 3 * 1 - 1rem);
-        }
-
-        .top-banner,
-        .steps {
-            width: 100%;
-        }
-
-        .top-banner {
-            padding-top: 0;
-        }
-
-        .steps {
-            margin: 0;
-        }
-
-        .restaurants {
-            width: calc(100% / 3 * 2 - 1rem);
-            margin: 0;
-            padding-top: 0;
-        }
+  .home {
+    .home-main {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1400px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 50px;
     }
+
+    .container {
+      padding-right: 0;
+    }
+
+    .intro {
+      flex-direction: column;
+      width: calc(100% / 3 * 1 - 1rem);
+    }
+
+    .top-banner,
+    .steps {
+      width: 100%;
+    }
+
+    .top-banner {
+      padding-top: 0;
+    }
+
+    .steps {
+      margin: 0;
+    }
+
+    .restaurants {
+      width: calc(100% / 3 * 2 - 1rem);
+      margin: 0;
+      padding-top: 0;
+    }
+  }
 }
